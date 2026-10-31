@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary-dark: #0f4c3a;
+  --color-primary-green: #70a340;
+  --color-primary-green-hover: #5d8e30;
+  --color-heading-green: #3f7b23;
+  --color-text-main: #333333;
+  --font-lobster: 'Lobster', cursive;
+  --font-barlow: 'Barlow', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-script: 'Dancing Script', cursive;
+}
+
+body {
+  font-family: var(--font-barlow);
+  background-color: #fbfbfb;
+  color: var(--color-text-main);
+  font-size: 14px;
+  line-height: 1.6;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+/* Tiêu đề mục chính - Font Lobster trứ danh chuẩn xác phong cách HTX Thanh Bình */
+.font-script-title,
+.heading-title,
+.font-lobster-heading,
+._lobster-font {
+  font-family: 'Lobster', cursive;
+  font-weight: 400;
+  color: #3b7e28;
+  font-size: 2.25rem;
+  line-height: 1.25;
+  letter-spacing: 0.5px;
+}
+
+@media (min-width: 768px) {
+  .font-script-title,
+  .heading-title,
+  .font-lobster-heading,
+  ._lobster-font {
+    font-size: 2.75rem;
+  }
+}
+
+/* Subtitle trên Hero Banner */
+.font-welcome-script {
+  font-family: var(--font-script);
+  font-size: 1.85rem;
+  color: #fff9e6;
+  font-weight: 600;
+}
+
+@media (min-width: 768px) {
+  .font-welcome-script {
+    font-size: 2.25rem;
+  }
+}
+
+/* Tiêu đề in hoa theo chuẩn Barlow */
+.font-barlow-title {
+  font-family: var(--font-barlow);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+/* Thanh Menu chính nền xanh rêu đậm #0f4c3a */
+.nav-menu-bar {
+  background-color: #0f4c3a;
+  font-family: var(--font-barlow);
+}
+
+/* Nút con nhộng màu xanh lá tươi chuẩn HTX Thanh Bình */
+.btn-pill-green {
+  background-color: #70a340;
+  color: #ffffff;
+  border-radius: 9999px;
+  font-family: var(--font-barlow);
+  font-weight: 700;
+  font-size: 0.8125rem;
+  padding: 0.5rem 1.25rem;
+  transition: all 0.25s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(112, 163, 64, 0.25);
+}
+
+.btn-pill-green:hover {
+  background-color: #5d8e30;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(112, 163, 64, 0.35);
+}
+
+/* Thẻ sản phẩm chuẩn xác theo hình chụp */
+.tb-product-card {
+  background: #ffffff;
+  border: 1px solid #f0f2eb;
+  border-radius: 12px;
+  transition: all 0.3s cubic-bezier(0.165, 0.84, 0.44, 1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.02);
+}
+
+.tb-product-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 20px -4px rgba(15, 76, 58, 0.1);
+  border-color: #d1e7bc;
+}
+
+/* Vòng tròn 4 trụ cột "Tại sao chọn chúng tôi" */
+.circle-pillar {
+  width: 140px;
+  height: 140px;
+  border-radius: 50%;
+  border: 4px solid #ffffff;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.circle-pillar:hover {
+  transform: scale(1.05);
+}
+
+/* Dải hình nền núi rừng & rặng dừa trước footer (như trong ảnh chụp) */
+.footer-mountain-bg {
+  background-image: linear-gradient(to bottom, rgba(251, 251, 251, 0) 0%, rgba(15, 76, 58, 0.8) 50%, #0f4c3a 100%), 
+                    url('https://images.unsplash.com/photo-1544979590-37e9b47eb705?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  min-height: 260px;
+}
+
+/* Trợ lý AI CoCo */
+.coco-fab {
+  box-shadow: 0 10px 25px -3px rgba(112, 163, 64, 0.4);
+  animation: floatBounce 3s ease-in-out infinite;
+}
+
+@keyframes floatBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-7px); }
+}
+
+.coco-chatbox {
+  width: 380px;
+  max-width: calc(100vw - 32px);
+  height: 520px;
+  max-height: calc(100vh - 120px);
+  border-radius: 1.25rem;
+}
