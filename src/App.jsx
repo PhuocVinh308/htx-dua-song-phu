@@ -18,6 +18,7 @@ import B2BExportSection from './components/B2BExportSection.jsx';
 
 import CartDrawer from './components/CartDrawer.jsx';
 import ProductModal from './components/ProductModal.jsx';
+import ProductDetailPage from './components/ProductDetailPage.jsx';
 import AICoCoAssistant from './components/AICoCoAssistant.jsx';
 import Footer from './components/Footer.jsx';
 
@@ -62,8 +63,15 @@ export default function App() {
 
   const [cartDrawerOpen, setCartDrawerOpen] = useState(false);
   const [modalProduct, setModalProduct] = useState(null);
+  const [selectedDetailProduct, setSelectedDetailProduct] = useState(null);
   const [traceBatchCode, setTraceBatchCode] = useState('SP-DXL-2026-01');
   const [toastMessage, setToastMessage] = useState(null);
+
+  const handleViewDetail = (product) => {
+    setSelectedDetailProduct(product);
+    setActiveTab('product-detail');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   useEffect(() => {
     if (typeof localStorage !== 'undefined') {
@@ -193,7 +201,7 @@ export default function App() {
             {/* Sản phẩm nổi bật: 12 sản phẩm dạng thẻ nền trắng có nút > XEM CHI TIẾT */}
             <ProductSection
               products={coopData.products}
-              onQuickView={(p) => setModalProduct(p)}
+              onQuickView={handleViewDetail}
               onExploreAll={() => {
                 setSelectedCategory('all');
                 setActiveTab('products');
@@ -219,6 +227,28 @@ export default function App() {
           </>
         )}
 
+        {/* TAB CHI TIẾT SẢN PHẨM: ĐẦY ĐỦ GIÁ TIỀN, ĐẶC ĐIỂM, THÔNG SỐ, ĐÁNH GIÁ */}
+        {activeTab === 'product-detail' && selectedDetailProduct && (
+          <ProductDetailPage
+            product={selectedDetailProduct}
+            allProducts={coopData.products}
+            onBack={() => {
+              setActiveTab('products');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            onAddToCart={addToCart}
+            onBuyNow={(prod, q) => {
+              addToCart(prod, q);
+              setCartDrawerOpen(true);
+            }}
+            onSelectProduct={(p) => {
+              setSelectedDetailProduct(p);
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            onTraceClick={handleTraceClick}
+          />
+        )}
+
         {/* TAB 2: GIỚI THIỆU CHUẨN XÁC 100% NHƯ ẢNH 2 */}
         {activeTab === 'about' && (
           <AboutPage coopInfo={coopData.coopInfo} />
@@ -228,7 +258,7 @@ export default function App() {
         {activeTab === 'products' && (
           <ProductsPage
             products={coopData.products}
-            onQuickView={(p) => setModalProduct(p)}
+            onQuickView={handleViewDetail}
             selectedCategory={selectedCategory}
             onSelectCategory={(cat) => setSelectedCategory(cat)}
           />
@@ -292,6 +322,7 @@ export default function App() {
         onClose={() => setModalProduct(null)}
         onAddToCart={addToCart}
         onTraceClick={handleTraceClick}
+        onViewDetail={handleViewDetail}
       />
 
       {/* Trợ lý AI Bé CoCo */}
@@ -299,7 +330,7 @@ export default function App() {
         knowledgeBase={coopData.aiKnowledge}
         products={coopData.products}
         onAddToCart={addToCart}
-        onQuickView={(p) => setModalProduct(p)}
+        onQuickView={handleViewDetail}
       />
     </div>
   );

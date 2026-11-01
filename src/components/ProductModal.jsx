@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { X, Star, Check, ArrowRight, Plus } from 'lucide-react';
 
-export default function ProductModal({ product, onClose, onAddToCart, onTraceClick }) {
+export default function ProductModal({ product, onClose, onAddToCart, onTraceClick, onViewDetail }) {
   const [qty, setQty] = useState(1);
 
   if (!product) return null;
@@ -138,6 +138,21 @@ export default function ProductModal({ product, onClose, onAddToCart, onTraceCli
                 <span>Thêm Vào Giỏ Hàng</span>
               </button>
             </div>
+
+            {onViewDetail && (
+              <div className="text-center pt-2">
+                <button
+                  onClick={() => {
+                    onClose();
+                    onViewDetail(product);
+                  }}
+                  className="text-xs text-[#3b7e28] hover:underline font-bold inline-flex items-center gap-1"
+                >
+                  <span>Xem trang chi tiết sản phẩm đầy đủ (Giá tiền, thông số, review)</span>
+                  <ArrowRight className="w-3.5 h-3.5" />
+                </button>
+              </div>
+            )}
           </div>
         </div>
       </div>
