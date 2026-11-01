@@ -41,25 +41,25 @@ export const coopData = {
       num: "01",
       title: "100% Tự nhiên",
       desc: "Trồng trọt hoàn toàn bằng phương pháp hữu cơ vi sinh, không chất kích thích tăng trưởng.",
-      image: "https://images.unsplash.com/photo-1544979590-37e9b47eb705?auto=format&fit=crop&w=400&q=80"
+      image: "/products/green-coconut.jpg"
     },
     {
       num: "02",
       title: "Nuôi trồng hiện đại",
       desc: "Ứng dụng hệ thống tưới nước nhỏ giọt tự động và kiểm soát sâu bọ bằng thiên địch tự nhiên.",
-      image: "https://images.unsplash.com/photo-1520072959219-c595dc870360?auto=format&fit=crop&w=400&q=80"
+      image: "/products/diamond-coconut.jpg"
     },
     {
       num: "03",
       title: "Chế biến sạch sẽ",
       desc: "Nhà xưởng đạt chuẩn ISO 22000 & HACCP, kiểm soát vô trùng nghiêm ngặt từ khâu nguyên liệu.",
-      image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=400&q=80"
+      image: "/products/virgin-coconut-oil.jpg"
     },
     {
       num: "04",
       title: "Tốt cho sức khỏe",
       desc: "Giàu vi khoáng tự nhiên, axit béo chuỗi trung bình MCT và chất chống oxy hóa lành tính.",
-      image: "https://images.unsplash.com/photo-1587411768638-ec71f8e33b78?auto=format&fit=crop&w=400&q=80"
+      image: "/products/coconut-nectar.jpg"
     }
   ],
 
@@ -71,7 +71,7 @@ export const coopData = {
       category: "vat-lieu",
       price: 25000,
       originalPrice: 30000,
-      image: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=600&q=80",
+      image: "/products/coir-fiber.jpg",
       badge: "XUẤT KHẨU",
       badgeColor: "bg-blue-600",
       tagline: "Xơ dừa sinh thái xử lý khử chát tiêu chuẩn xuất khẩu",
@@ -95,7 +95,7 @@ export const coopData = {
       category: "thuc-pham",
       price: 45000,
       originalPrice: 55000,
-      image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=600&q=80",
+      image: "/products/coconut-flour.jpg",
       badge: "OCOP 4 SAO",
       badgeColor: "bg-emerald-600",
       tagline: "Cơm dừa sấy mịn tiệt trùng - Giàu chất xơ hòa tan",
@@ -119,7 +119,7 @@ export const coopData = {
       category: "thuc-pham",
       price: 55000,
       originalPrice: 65000,
-      image: "https://images.unsplash.com/photo-1587411768638-ec71f8e33b78?auto=format&fit=crop&w=600&q=80",
+      image: "/products/coconut-flour.jpg",
       badge: "BÁN CHẠY",
       badgeColor: "bg-amber-600",
       tagline: "Hương vị đậm đà thơm béo - Nguồn năng lượng lành mạnh",
@@ -143,7 +143,7 @@ export const coopData = {
       category: "thuc-pham",
       price: 65000,
       originalPrice: 78000,
-      image: "https://images.unsplash.com/photo-1544979590-37e9b47eb705?auto=format&fit=crop&w=600&q=80",
+      image: "/products/coconut-flour.jpg",
       badge: "KETO / DIET",
       badgeColor: "bg-purple-600",
       tagline: "Chỉ số đường huyết thấp - Giải pháp vàng cho người ăn kiêng",
@@ -167,7 +167,7 @@ export const coopData = {
       category: "vat-lieu",
       price: 18000,
       originalPrice: 22000,
-      image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=600&q=80",
+      image: "/products/coco-husk-chips.jpg",
       badge: "NGUYÊN LIỆU",
       badgeColor: "bg-stone-600",
       tagline: "Giá thể hữu cơ trồng lan và cải tạo đất nông nghiệp",
@@ -191,7 +191,7 @@ export const coopData = {
       category: "trai-cay-tuoi",
       price: 22000,
       originalPrice: 26000,
-      image: "https://images.unsplash.com/photo-1520072959219-c595dc870360?auto=format&fit=crop&w=600&q=80",
+      image: "/products/green-coconut.jpg",
       badge: "OCOP 4 SAO",
       badgeColor: "bg-emerald-600",
       tagline: "Nước ngọt thanh mát lành - Độ ngọt tự nhiên > 8.5° Brix",
@@ -239,7 +239,7 @@ export const coopData = {
       category: "thuc-pham",
       price: 40000,
       originalPrice: 48000,
-      image: "https://images.unsplash.com/photo-1587411768638-ec71f8e33b78?auto=format&fit=crop&w=600&q=80",
+      image: "/products/coconut-cubes.jpg",
       badge: "TIỆN LỢI",
       badgeColor: "bg-teal-600",
       tagline: "Cơm dừa bánh tẻ cấp đông IQF - Giòn ngọt thơm ngon",
@@ -263,7 +263,7 @@ export const coopData = {
       category: "trai-cay-say",
       price: 38000,
       originalPrice: 45000,
-      image: "https://images.unsplash.com/photo-1590402494682-cd3fb53b1f70?auto=format&fit=crop&w=600&q=80",
+      image: "/products/coconut-chips.jpg",
       badge: "ĂN VẶT HEALTHY",
       badgeColor: "bg-orange-600",
       tagline: "Sấy nhiệt lạnh giòn rụm - Thơm nức vị dừa Tam Bình",
@@ -287,7 +287,7 @@ export const coopData = {
       category: "trai-cay-say",
       price: 52000,
       originalPrice: 62000,
-      image: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=600&q=80",
+      image: "/products/jackfruit-chips.jpg",
       badge: "ĐẶC SẢN",
       badgeColor: "bg-amber-600",
       tagline: "Mít nghệ chín cây bãi bồi - Sấy chân không giòn rụm",
@@ -311,7 +311,7 @@ export const coopData = {
       category: "trai-cay-say",
       price: 35000,
       originalPrice: 42000,
-      image: "https://images.unsplash.com/photo-1520072959219-c595dc870360?auto=format&fit=crop&w=600&q=80",
+      image: "/products/dried-banana.jpg",
       badge: "TRUYỀN THỐNG",
       badgeColor: "bg-yellow-600",
       tagline: "Chuối xiêm chín bói phơi sấy dẻo ngọt mật tự nhiên",
@@ -335,7 +335,7 @@ export const coopData = {
       category: "trai-cay-tuoi",
       price: 160000,
       originalPrice: 190000,
-      image: "https://images.unsplash.com/photo-1544979590-37e9b47eb705?auto=format&fit=crop&w=600&q=80",
+      image: "/products/wax-coconut.jpg",
       badge: "THƯỢNG HẠNG",
       badgeColor: "bg-red-600",
       tagline: "Cơm dừa sáp dẻo quánh như kem - Bao ăn 1 đổi 1",
@@ -431,7 +431,7 @@ export const coopData = {
       category: "thu-cong",
       price: 120000,
       originalPrice: 145000,
-      image: "https://images.unsplash.com/photo-1544979590-37e9b47eb705?auto=format&fit=crop&w=600&q=80",
+      image: "/products/woven-bag.jpg",
       badge: "LÀNG NGHỀ",
       badgeColor: "bg-amber-800",
       tagline: "Đan lát lục bình kết hợp bẹ dừa - Phong cách sống xanh Vintage",
@@ -647,7 +647,7 @@ export const coopData = {
       labTest: "Dư lượng thuốc BVTV: 0.00 ppm; Độ ngọt Brix: 8.8°; Coliforms: Không phát hiện",
       auditor: "Trung tâm Giám định Chất lượng Nông sản Miền Tây",
       blockchainTx: "0x8fa1b98c37d4...e901a4b (Mã xác thực số bảo an)",
-      image: "https://images.unsplash.com/photo-1544979590-37e9b47eb705?auto=format&fit=crop&w=600&q=80"
+      image: "/products/diamond-coconut.jpg"
     },
     "SP-DDL-2026-03": {
       batchCode: "SP-DDL-2026-03",
@@ -664,7 +664,7 @@ export const coopData = {
       labTest: "Hàm lượng Acid Lauric: 52.4%; Chỉ số Acid peroxide: 0.12 meq/kg; Độ ẩm: 0.04%",
       auditor: "Viện Pasteur TP. Hồ Chí Minh kiểm nghiệm",
       blockchainTx: "0x7bc2d04a621f...f772e1c (Mã xác thực số bảo an)",
-      image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=600&q=80"
+      image: "/products/virgin-coconut-oil.jpg"
     },
     "SP-MHD-2026-02": {
       batchCode: "SP-MHD-2026-02",
@@ -681,7 +681,7 @@ export const coopData = {
       labTest: "Chỉ số GI: 38; Kali: 245mg/100g; Magie: 42mg/100g; Không phẩm màu",
       auditor: "Sở Khoa học & Công nghệ tỉnh Vĩnh Long",
       blockchainTx: "0x3af9e41b99a8...a120c8f (Mã xác thực số bảo an)",
-      image: "https://images.unsplash.com/photo-1587411768638-ec71f8e33b78?auto=format&fit=crop&w=600&q=80"
+      image: "/products/coconut-nectar.jpg"
     },
     // Batch code aliases supporting standard and shorthand lookup schemes
     "SP-2026-01": {
@@ -699,7 +699,7 @@ export const coopData = {
       labTest: "Dư lượng thuốc BVTV: 0.00 ppm; Độ ngọt Brix: 8.8°; Coliforms: Không phát hiện",
       auditor: "Trung tâm Giám định Chất lượng Nông sản Miền Tây",
       blockchainTx: "0x8fa1b98c37d4...e901a4b (Mã xác thực số bảo an)",
-      image: "https://images.unsplash.com/photo-1544979590-37e9b47eb705?auto=format&fit=crop&w=600&q=80"
+      image: "/products/diamond-coconut.jpg"
     },
     "SP-2026-03": {
       batchCode: "SP-2026-03",
@@ -716,7 +716,7 @@ export const coopData = {
       labTest: "Hàm lượng Acid Lauric: 52.4%; Chỉ số Acid peroxide: 0.12 meq/kg; Độ ẩm: 0.04%",
       auditor: "Viện Pasteur TP. Hồ Chí Minh kiểm nghiệm",
       blockchainTx: "0x7bc2d04a621f...f772e1c (Mã xác thực số bảo an)",
-      image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=600&q=80"
+      image: "/products/virgin-coconut-oil.jpg"
     },
     "SP-2026-08": {
       batchCode: "SP-2026-08",
@@ -733,7 +733,7 @@ export const coopData = {
       labTest: "Dư lượng thuốc BVTV: 0.00 ppm; Độ ngọt Brix: 8.8°; Coliforms: Không phát hiện",
       auditor: "Trung tâm Giám định Chất lượng Nông sản Miền Tây",
       blockchainTx: "0x8fa1b98c37d4...e901a4b (Mã xác thực số bảo an)",
-      image: "https://images.unsplash.com/photo-1544979590-37e9b47eb705?auto=format&fit=crop&w=600&q=80"
+      image: "/products/diamond-coconut.jpg"
     },
     "SP-2026-02": {
       batchCode: "SP-2026-02",
@@ -750,7 +750,7 @@ export const coopData = {
       labTest: "Chỉ số GI: 38; Kali: 245mg/100g; Magie: 42mg/100g; Không phẩm màu",
       auditor: "Sở Khoa học & Công nghệ tỉnh Vĩnh Long",
       blockchainTx: "0x3af9e41b99a8...a120c8f (Mã xác thực số bảo an)",
-      image: "https://images.unsplash.com/photo-1587411768638-ec71f8e33b78?auto=format&fit=crop&w=600&q=80"
+      image: "/products/coconut-nectar.jpg"
     }
   },
 
