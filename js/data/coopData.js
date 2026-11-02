@@ -87,7 +87,7 @@ export const coopData = {
       isFeatured: true,
       badge: "OCOP 4 SAO",
       badgeColor: "bg-amber-600",
-      image: "/products/diamond-coconut.jpg",
+      image: "./products/diamond-coconut.jpg",
       tagline: "Nước ngọt thanh dịu, độ Brix đạt 8.5° - 9.2° tự nhiên",
       shortDesc: "Được tuyển chọn kỹ lưỡng từ các rặng dừa xiêm giống thuần chủng tại ấp Phú Điền, gọt vỏ tạo hình kim cương sang trọng, bảo quản màng bọc sinh học kháng khuẩn.",
       features: [
@@ -111,7 +111,7 @@ export const coopData = {
       isFeatured: true,
       badge: "BÁN CHẠY NHẤT",
       badgeColor: "bg-emerald-600",
-      image: "/products/virgin-coconut-oil.jpg",
+      image: "./products/virgin-coconut-oil.jpg",
       tagline: "Chiết xuất ly tâm không gia nhiệt, giữ 100% axit lauric",
       shortDesc: "Sản phẩm đổi mới sáng tạo ứng dụng công nghệ ly tâm 3 pha từ cơm dừa già tươi hái trong ngày. Dầu trong vắt như nước suối, thoang thoảng hương thơm dừa non, không gắt dầu.",
       features: [
@@ -135,7 +135,7 @@ export const coopData = {
       isFeatured: true,
       badge: "THỰC DƯỠNG XANH",
       badgeColor: "bg-orange-600",
-      image: "/products/coconut-nectar.jpg",
+      image: "./products/coconut-nectar.jpg",
       tagline: "Chỉ số đường huyết GI thấp, dồi dào khoáng chất Kali & Magie",
       shortDesc: "Được thu hái thủ công từ những búp hoa dừa khỏe mạnh theo bí quyết mát-xa búp hoa truyền thống của nghệ nhân Tam Bình. Cô đặc chậm ở nhiệt độ thấp để giữ trọn khoáng chất và axit amin.",
       features: [
@@ -159,7 +159,7 @@ export const coopData = {
       isFeatured: true,
       badge: "ĐẶC SẢN QUÝ",
       badgeColor: "bg-purple-600",
-      image: "/products/wax-coconut.jpg",
+      image: "./products/wax-coconut.jpg",
       tagline: "Cơm dày mềm dẻo như kem, nước dừa kẹo sền sệt béo bùi",
       shortDesc: "Giống dừa sáp đặc sản được viện cây ăn quả Miền Nam chuyển giao công nghệ cấy phôi, trồng trên vùng đất phù sa ngập mặn nhẹ màu mỡ của xã Song Phú cho tỷ lệ sáp đạt trên 85%.",
       features: [
@@ -183,7 +183,7 @@ export const coopData = {
       isFeatured: false,
       badge: "SẢN PHẨM XANH",
       badgeColor: "bg-slate-700",
-      image: "/products/coco-husk-chips.jpg",
+      image: "./products/coco-husk-chips.jpg",
       tagline: "Chỉ số hấp phụ Iodine > 950 mg/g, diện tích bề mặt cực lớn",
       shortDesc: "Được sản xuất từ gáo dừa già thu hồi sau khi lấy cơm. Nung hoạt hóa ở nhiệt độ 900°C bằng hơi nước áp suất cao, tạo mạng lưới vi mao quản dày đặc giúp lọc sạch kim loại nặng và độc tố.",
       features: [
@@ -207,7 +207,7 @@ export const coopData = {
       isFeatured: false,
       badge: "NÔNG NGHIỆP ĐÔ THỊ",
       badgeColor: "bg-lime-600",
-      image: "/products/coco-husk-chips.jpg",
+      image: "./products/coco-husk-chips.jpg",
       tagline: "Đã xử lý sạch chất chát Lignin & Tanin, ủ sẵn nấm đối kháng",
       shortDesc: "Tận dụng mụn dừa từ vỏ dừa khô Song Phú, rửa sạch qua 5 chu kỳ nước khử chát hoàn toàn, bổ sung vi sinh Trichoderma ngừa thối rễ rồi ép nén thủy lực thể tích nhỏ gọn.",
       features: [
@@ -231,7 +231,7 @@ export const coopData = {
       isFeatured: true,
       badge: "XUẤT KHẨU",
       badgeColor: "bg-teal-700",
-      image: "/products/coconut-bowl.jpg",
+      image: "./products/coconut-bowl.jpg",
       tagline: "Nghệ nhân gọt đẽo thủ công, lau bóng bằng chính dầu dừa tự nhiên",
       shortDesc: "Mỗi chiếc bát là một tác phẩm độc nhất vô nhị từ gáo dừa khô dày dặn của vùng Song Phú. Sản phẩm được chà nhám 7 cấp độ bóng mịn, không dùng sơn PU độc hại, thân thiện với thực phẩm.",
       features: [

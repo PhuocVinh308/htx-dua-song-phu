@@ -245,7 +245,7 @@ export async function runChallenger4AdversarialSuite() {
       t.assert(record.location && record.location.length > 10, `Record for "${alias}" must have location details`);
       t.assert(record.blockchainTx && record.blockchainTx.startsWith('0x'), `Record for "${alias}" must have blockchainTx hash`);
       t.assert(Array.isArray(record.certifications) && record.certifications.length >= 2, `Record for "${alias}" must list certifications`);
-      t.assert(record.image && (record.image.startsWith('http') || record.image.startsWith('/')), `Record for "${alias}" must have valid image URL`);
+      t.assert(record.image && (record.image.startsWith('http') || record.image.startsWith('/') || record.image.startsWith('.')), `Record for "${alias}" must have valid image URL`);
     }
   });
 
