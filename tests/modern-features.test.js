@@ -49,18 +49,7 @@ test('Modern Interactive Features Suite', async (t) => {
     assert.ok(html.includes('Công nghệ chế biến'), 'Must compare processing technology');
   });
 
-  await t.test('4. FarmIoTStation renders real-time microclimate and Mekong salinity metrics', async () => {
-    const FarmIoTStation = await loadComponent('components/FarmIoTStation.jsx');
-    const html = renderToHtml(FarmIoTStation, {});
-
-    assert.ok(html.includes('Trạm Quan Trắc Vi Khí Hậu'), 'Must render IoT station title');
-    assert.ok(html.includes('Nhiệt Độ Vườn'), 'Must monitor orchard temperature');
-    assert.ok(html.includes('Độ Mặn Nước Sông Măng Thít') || html.includes('Măng Thít'), 'Must monitor river salinity');
-    assert.ok(html.includes('Độ pH Đất Bãi Bồi'), 'Must monitor soil pH');
-    assert.ok(html.includes('LoRaWAN'), 'Must indicate wireless IoT network standard');
-  });
-
-  await t.test('5. B2BCalculator computes volume tiers, box counts, and export savings', async () => {
+  await t.test('4. B2BCalculator computes volume tiers, box counts, and export savings', async () => {
     const B2BCalculator = await loadComponent('components/B2BCalculator.jsx');
     const html = renderToHtml(B2BCalculator, {});
 
@@ -70,7 +59,7 @@ test('Modern Interactive Features Suite', async (t) => {
     assert.ok(html.includes('Tổng trọng lượng') || html.includes('Tấn'), 'Must estimate total tonnage');
   });
 
-  await t.test('6. CartDrawer renders interactive voucher discount code input and tags', async () => {
+  await t.test('5. CartDrawer renders interactive voucher discount code input and tags', async () => {
     const CartDrawer = await loadComponent('components/CartDrawer.jsx');
     const cart = {
       P01: { product: coopData.products[0], quantity: 2 },

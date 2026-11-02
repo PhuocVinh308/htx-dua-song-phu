@@ -23,7 +23,6 @@ import ArticleDetailPage from './components/ArticleDetailPage.jsx';
 import SearchModal from './components/SearchModal.jsx';
 import WishlistDrawer from './components/WishlistDrawer.jsx';
 import ProductCompareModal from './components/ProductCompareModal.jsx';
-import FarmIoTStation from './components/FarmIoTStation.jsx';
 import LiveOrderToast from './components/LiveOrderToast.jsx';
 import FloatingControls from './components/FloatingControls.jsx';
 import AICoCoAssistant from './components/AICoCoAssistant.jsx';
@@ -304,9 +303,6 @@ export default function App() {
 
             {/* Tại sao chọn chúng tôi: 4 vòng tròn ảnh & Logo tròn ở giữa chuẩn Ảnh 1 */}
             <WhyChooseUs pillars={coopData.whyChooseUsPillars} />
-
-            {/* Trạm Quan Trắc Vi Khí Hậu & Nông Nghiệp Thông Minh IoT Song Phú */}
-            <FarmIoTStation />
 
             {/* Sản phẩm nổi bật: 12 sản phẩm dạng thẻ nền trắng có nút > XEM CHI TIẾT */}
             <ProductSection
