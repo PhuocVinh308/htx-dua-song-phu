@@ -19,6 +19,7 @@ import B2BExportSection from './components/B2BExportSection.jsx';
 import CartDrawer from './components/CartDrawer.jsx';
 import ProductModal from './components/ProductModal.jsx';
 import ProductDetailPage from './components/ProductDetailPage.jsx';
+import ArticleDetailPage from './components/ArticleDetailPage.jsx';
 import AICoCoAssistant from './components/AICoCoAssistant.jsx';
 import Footer from './components/Footer.jsx';
 
@@ -64,12 +65,21 @@ export default function App() {
   const [cartDrawerOpen, setCartDrawerOpen] = useState(false);
   const [modalProduct, setModalProduct] = useState(null);
   const [selectedDetailProduct, setSelectedDetailProduct] = useState(null);
+  const [selectedArticle, setSelectedArticle] = useState(null);
+  const [articleSourceTab, setArticleSourceTab] = useState('collections');
   const [traceBatchCode, setTraceBatchCode] = useState('SP-DXL-2026-01');
   const [toastMessage, setToastMessage] = useState(null);
 
   const handleViewDetail = (product) => {
     setSelectedDetailProduct(product);
     setActiveTab('product-detail');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleViewArticle = (article, source = 'collections') => {
+    setSelectedArticle(article);
+    setArticleSourceTab(source);
+    setActiveTab('article-detail');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
@@ -84,7 +94,7 @@ export default function App() {
     if (typeof window === 'undefined') return;
     const handleHash = () => {
       const hash = window.location.hash.replace('#', '');
-      const validTabs = ['home', 'about', 'products', 'collections', 'certifications', 'circular', 'traceability', 'contact'];
+      const validTabs = ['home', 'about', 'products', 'collections', 'certifications', 'circular', 'traceability', 'contact', 'product-detail', 'article-detail'];
       if (hash && validTabs.includes(hash)) {
         setActiveTab(hash);
         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -171,6 +181,7 @@ export default function App() {
         activeTab={activeTab}
         setActiveTab={setActiveTab}
         onSelectCategory={(cat) => setSelectedCategory(cat)}
+        currentArticleCategory={selectedArticle?.category || (selectedArticle?.code ? 'Chứng nhận' : '')}
       />
 
       <main className="flex-1">
@@ -220,8 +231,7 @@ export default function App() {
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
               onArticleClick={(item) => {
-                setActiveTab('collections');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
+                handleViewArticle(item, 'home');
               }}
             />
           </>
@@ -249,6 +259,40 @@ export default function App() {
           />
         )}
 
+        {/* TAB CHI TIẾT BÀI VIẾT / CHỨNG NHẬN: HIỂN THỊ NỘI DUNG ĐỌC TIẾP */}
+        {activeTab === 'article-detail' && (
+          <ArticleDetailPage
+            article={selectedArticle || coopData.collections[0]}
+            allArticles={selectedArticle?.code ? coopData.certifications : coopData.collections}
+            onBack={(target) => {
+              if (target === 'home') {
+                setActiveTab('home');
+              } else if (target === 'certifications') {
+                setActiveTab('certifications');
+              } else if (target === 'collections') {
+                setActiveTab('collections');
+              } else {
+                setActiveTab(articleSourceTab || 'collections');
+              }
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            onSelectArticle={(item) => {
+              setSelectedArticle(item);
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            onExploreProducts={() => {
+              setSelectedCategory('all');
+              setActiveTab('products');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            onContactClick={() => {
+              setActiveTab('contact');
+              window.scrollTo({ top: 0, behavior: 'smooth' });
+            }}
+            showToast={showToast}
+          />
+        )}
+
         {/* TAB 2: GIỚI THIỆU CHUẨN XÁC 100% NHƯ ẢNH 2 */}
         {activeTab === 'about' && (
           <AboutPage coopInfo={coopData.coopInfo} />
@@ -266,12 +310,18 @@ export default function App() {
 
         {/* TAB 4: BỘ SƯU TẬP CHUẨN XÁC 100% NHƯ ẢNH 4 */}
         {activeTab === 'collections' && (
-          <CollectionsPage collections={coopData.collections} />
+          <CollectionsPage
+            collections={coopData.collections}
+            onArticleClick={(item) => handleViewArticle(item, 'collections')}
+          />
         )}
 
         {/* TAB 5: CHỨNG NHẬN CHUẨN XÁC 100% NHƯ ẢNH 5 */}
         {activeTab === 'certifications' && (
-          <CertificationsPage certifications={coopData.certifications} />
+          <CertificationsPage
+            certifications={coopData.certifications}
+            onArticleClick={(item) => handleViewArticle(item, 'certifications')}
+          />
         )}
 
         {/* TAB 6: KINH TẾ TUẦN HOÀN (SÁNG TẠO VƯỢT TRỘI) */}

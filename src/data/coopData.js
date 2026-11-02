@@ -998,14 +998,22 @@ export const coopData = {
   ],
 
   // 9 bài viết Bộ Sưu Tập như Ảnh 4
-    collections: [
+  collections: [
     {
       id: 1,
       date: "August 7, 2026",
       category: "Bộ Sưu Tập",
       title: "VIỆT NAM LÀ THỊ TRƯỜNG CUNG CẤP CÁC SẢN PHẨM DỪA XẾP THỨ HÀNG ĐẦU CHO HOA KỲ",
       desc: "Các sản phẩm dừa chế biến sâu của Đồng bằng sông Cửu Long đang được người tiêu dùng quốc tế đặc biệt ưa chuộng nhờ hương vị tự nhiên và giá trị dinh dưỡng cao.",
-      image: "./products/diamond-coconut.jpg"
+      image: "./products/diamond-coconut.jpg",
+      author: "Ban Xúc Tiến Thương Mại Quốc Tế SOCOOP",
+      readTime: "5 phút đọc",
+      content: [
+        "Theo thống kê mới nhất từ Bộ Nông nghiệp & Phát triển Nông thôn cùng cơ quan Hải quan Hoa Kỳ (US Customs), kim ngạch xuất khẩu dừa và các sản phẩm chế biến từ dừa của Việt Nam sang thị trường Mỹ tiếp tục tăng trưởng vượt bậc 28.5% so với cùng kỳ năm trước. Trong đó, các dòng sản phẩm dừa tươi gọt kim cương, cơm dừa sấy giòn OCOP và nước dừa đóng lon hữu cơ của Đồng bằng sông Cửu Long đang dẫn đầu bảng xếp hạng thị phần người tiêu dùng tại các bang California, Texas và New York.",
+        "Điểm mấu chốt giúp nông sản dừa Việt Nam tạo dựng vị thế vững chắc chính là chất lượng nguyên bản và độ ngọt tự nhiên từ thổ nhưỡng phù sa trù phú. Khác với nguồn dừa tại các quốc gia cận xích đạo khác, dừa xiêm vùng bãi bồi ven sông Măng Thít (xã Song Phú, Tam Bình) có vị ngọt thanh brix 7.5 - 8.2, mùi thơm thoang thoảng của hoa dừa tự nhiên và hàm lượng chất điện giải bù khoáng tự nhiên (Kali, Natri, Magie) rất cao.",
+        "Hợp tác xã Dừa Song Phú (SOCOOP) là một trong những đơn vị tiên phong đạt chứng nhận vùng trồng xuất khẩu chính ngạch sang Mỹ mã số VN-DNCB-0087. Mỗi trái dừa xuất xưởng đều trải qua quy trình 7 bước kiểm nghiệm nghiêm ngặt: kiểm tra độ chín sinh lý tại vườn, gọt tạo hình kim cương bằng dao thép chuyên dụng, khử trùng bằng nước ozon, dán tem QR Blockchain truy xuất từng cây dừa và bao bọc màng thở sinh học tự phân hủy.",
+        "Thời gian tới, HTX Dừa Song Phú tiếp tục đầu tư mở rộng 150 hecta vùng nguyên liệu liên kết hữu cơ theo tiêu chuẩn USDA Organic, đồng thời nâng cấp hệ thống kho lạnh bảo quản âm sâu để duy trì chuỗi cung ứng dừa tươi ngon tuyệt hảo suốt 45 ngày hành trình vượt biển đến tay đối tác Hoa Kỳ."
+      ]
     },
     {
       id: 2,
@@ -1013,7 +1021,14 @@ export const coopData = {
       category: "Bộ Sưu Tập",
       title: "DẦU DỪA ÉP LẠNH LY TÂM ĐƯỢC NGƯỜI TIÊU DÙNG ANH ĐÓN NHẬN TÍCH CỰC",
       desc: "Lô hàng dầu dừa nguyên chất không gia nhiệt của HTX Dừa Song Phú được đánh giá cao tại các hội chợ nông sản hữu cơ London nhờ giữ trọn axit lauric tự nhiên.",
-      image: "./products/factory-cold-press.jpg"
+      image: "./products/factory-cold-press.jpg",
+      author: "Phòng Nghiên Cứu & Phát Triển (R&D) SOCOOP",
+      readTime: "4 phút đọc",
+      content: [
+        "Tại Hội chợ Nông sản Thực phẩm Sinh thái London (Organic Food Expo UK), gian hàng của Hợp tác xã Dừa Song Phú đã thu hút hàng ngàn lượt khách tham quan và đối tác thương mại trải nghiệm sản phẩm dầu dừa tinh khiết ép lạnh ly tâm 3 pha (Centrifugal Cold-Pressed Virgin Coconut Oil).",
+        "Khác với phương pháp ép nhiệt truyền thống dễ làm biến tính dầu và tạo mùi khét, công nghệ ly tâm không gia nhiệt (dưới 40°C) của SOCOOP giúp tách triệt để nước và tạp chất trong môi trường vô trùng. Sản phẩm đạt độ trong suốt như pha lê, mùi thơm dịu nhẹ thoang thoảng của cơm dừa tươi và giữ nguyên hơn 52% hàm lượng Axit Lauric quý giá — một loại axit béo chuỗi trung bình (MCFA) có tính kháng khuẩn và tăng cường miễn dịch vượt trội.",
+        "Nhiều chuyên gia dinh dưỡng và các chuỗi mỹ phẩm organic tại Anh đã ký kết biên bản ghi nhớ hợp tác nhập khẩu định kỳ với HTX Dừa Song Phú nhằm ứng dụng trong các liệu trình chăm sóc tóc, dưỡng da sinh học cao cấp và chế độ ăn kiêng Keto thuần tự nhiên."
+      ]
     },
     {
       id: 3,
@@ -1021,7 +1036,14 @@ export const coopData = {
       category: "Bộ Sưu Tập",
       title: "MẬT HOA DỪA CÓ CÔNG DỤNG GÌ? NHỮNG LỢI ÍCH TUYỆT VỜI CHO SỨC KHỎE",
       desc: "Mật hoa dừa là chất tạo ngọt thực dưỡng tự nhiên có chỉ số đường huyết thấp, giàu khoáng chất Kali và Magie, bảo vệ tim mạch và nâng cao sức đề kháng.",
-      image: "./products/farm-flower-nectar.jpg"
+      image: "./products/farm-flower-nectar.jpg",
+      author: "Hội Đồng Cố Vấn Dinh Dưỡng Nông Nghiệp",
+      readTime: "4 phút đọc",
+      content: [
+        "Mật hoa dừa tự nhiên là tinh túy được tiết ra từ búp hoa dừa chưa nở thông qua bàn tay mát-xa điêu luyện của các nghệ nhân lành nghề lúc 5 giờ sáng. Đây là chất tạo ngọt thực vật lành mạnh hàng đầu hiện nay, hoàn toàn không qua tinh luyện hóa chất.",
+        "Nghiên cứu khoa học chỉ ra rằng mật hoa dừa sở hữu chỉ số đường huyết rất thấp (GI chỉ khoảng 35, so với đường mía là 65 và mật ong là 58), giúp ổn định đường huyết, rất phù hợp cho người ăn kiêng, người tiền tiểu đường hoặc người theo lối sống thực dưỡng lành mạnh.",
+        "Bên cạnh vị ngọt thanh tao cùng hương thơm hoa dừa ấm áp, mật hoa dừa SOCOOP chứa dồi dào khoáng chất Kali, Natri, Magie và 17 loại axit amin thiết yếu. Sản phẩm có thể dùng trực tiếp để pha trà, làm bánh, ướp món ăn hoặc bổ sung năng lượng tức thì sau khi vận động thể thao."
+      ]
     },
     {
       id: 4,
@@ -1029,7 +1051,14 @@ export const coopData = {
       category: "Bộ Sưu Tập",
       title: "DỪA SÁP CẤY PHÔI TAM BÌNH: ĐẶC SẢN THƯỢNG HẠNG VƯƠN XA",
       desc: "Kỹ thuật cấy phôi tiên tiến giúp tỷ lệ sáp đạt trên 85%, mở ra cơ hội làm giàu mới cho các hộ nông dân trồng dừa trên vùng đất phù sa bãi bồi Song Phú.",
-      image: "./products/wax-coconut.jpg"
+      image: "./products/wax-coconut.jpg",
+      author: "Ban Kỹ Thuật Giống & Canh Tác HTX",
+      readTime: "5 phút đọc",
+      content: [
+        "Dừa sáp (hay còn gọi là dừa đặc ruột) từ lâu đã là bảo vật ẩm thực trứ danh của vùng đất Nam Bộ. Tuy nhiên, trước đây tỷ lệ quả cho sáp tự nhiên trong mỗi buồng dừa chỉ đạt từ 20% đến 25%, khiến sản lượng khan hiếm và giá thành đắt đỏ.",
+        "Để giải quyết nút thắt này, HTX Dừa Song Phú đã phối hợp cùng Viện Cây ăn quả Miền Nam chuyển giao thành công giống dừa sáp cấy phôi đồng loạt. Cây giống sau khi kiểm định ADN và nuôi cấy mô mang lại tỷ lệ cho quả sáp đỉnh cao lên đến 85% - 90%, cơm dừa dày quánh, xốp mềm dẻo như bơ kem và nước dừa kẹo sệt thơm nức.",
+        "Mô hình không chỉ giúp các hộ xã viên đạt doanh thu vượt trội từ 200.000đ - 250.000đ/trái mà còn tạo tiền đề để HTX chế biến các dòng kẹo dừa sáp, sữa chua dừa sáp thượng hạng phục vụ khách du lịch và thị trường quà biếu OCOP cao cấp."
+      ]
     },
     {
       id: 5,
@@ -1037,7 +1066,14 @@ export const coopData = {
       category: "Bộ Sưu Tập",
       title: "BẢO QUẢN VÀ CHẾ BIẾN DỪA XIÊM SAU THU HOẠCH",
       desc: "Công nghệ gọt kim cương và bọc màng sinh học giúp bảo quản dừa tươi giữ nguyên độ ngọt mát trong 45 ngày mà không dùng bất kỳ hóa chất tẩy trắng nào.",
-      image: "./products/factory-processing.jpg"
+      image: "./products/factory-processing.jpg",
+      author: "Ban Quản Lý Chất Lượng Nhà Xưởng SOCOOP",
+      readTime: "4 phút đọc",
+      content: [
+        "Vấn đề nan giải nhất của dừa tươi sau thu hoạch chính là hiện tượng thâm vỏ, mất nước và giảm độ ngọt sau vài ngày. Để giải quyết triệt để mà tuyệt đối không dùng chất tẩy trắng hóa học độc hại, HTX Dừa Song Phú đã chuẩn hóa công nghệ gọt tỉa kim cương và bảo quản lạnh khép kín.",
+        "Quy trình bắt đầu từ khâu tuyển chọn những quả dừa xiêm đúng 8 tháng tuổi — thời điểm cơm dừa vừa cứng cạy, nước dừa đạt độ ngọt thanh tối đa. Sau khi gọt tạo hình đa giác kim cương sang trọng, quả dừa được ngâm xử lý trong dung dịch nano sinh học chiết xuất từ vỏ bưởi và muối khoáng tự nhiên.",
+        "Sau đó, quả dừa được bọc màng co vi lỗ thông minh (micro-perforated film) và bảo quản ở nhiệt độ ổn định 2°C - 5°C. Công nghệ này cho phép giữ dừa tươi ngon, cơm dừa trắng tinh và hương vị như vừa hái trên cây trong suốt 45 ngày bảo quản."
+      ]
     },
     {
       id: 6,
@@ -1045,7 +1081,14 @@ export const coopData = {
       category: "Bộ Sưu Tập",
       title: "THAM QUAN NÔNG TRẠI DỪA CỦA HTX DỪA SONG PHÚ",
       desc: "Đoàn đại biểu các tỉnh bạn ghé thăm mô hình kinh tế tuần hoàn và chuỗi giá trị dừa sạch không rác thải tại xã Song Phú, huyện Tam Bình.",
-      image: "./products/farm-coconut-grove.jpg"
+      image: "./products/farm-coconut-grove.jpg",
+      author: "Ban Điều Hành Hợp Tác Xã",
+      readTime: "4 phút đọc",
+      content: [
+        "Đoàn công tác đại diện Sở Nông nghiệp và PTNT cùng Liên minh HTX các tỉnh Đồng bằng sông Cửu Long đã có buổi làm việc và tham quan thực địa tại HTX Dừa Song Phú để nghiên cứu mô hình kinh tế nông nghiệp tuần hoàn kiểu mẫu.",
+        "Tại đây, các đại biểu bày tỏ sự ấn tượng trước chu trình khép kín: vườn dừa sinh thái kết hợp nuôi cá mương, khu xưởng sơ chế dầu dừa ly tâm hiện đại, phân xưởng dệt thảm xơ dừa xuất khẩu và khu ủ phân hữu cơ vi sinh từ mụn dừa thải loại phục vụ bón lại cho gốc dừa.",
+        "Mô hình không chỉ giúp giảm thiểu 100% rác thải nông nghiệp ra môi trường mà còn gia tăng giá trị kinh tế trên mỗi hecta đất canh tác lên gấp 3 lần so với phương thức trồng dừa truyền thống."
+      ]
     },
     {
       id: 7,
@@ -1053,7 +1096,14 @@ export const coopData = {
       category: "Bộ Sưu Tập",
       title: "TRẢI NGHIỆM VƯỜN DỪA HỮU CƠ VEN KINH THẦY CAI",
       desc: "Du khách trong và ngoài nước thích thú trải nghiệm chèo xuồng ba lá, tự tay hái dừa xiêm ngọt lịm và thưởng thức các món ăn dân dã miệt vườn Nam Bộ.",
-      image: "./products/farm-harvest-farmer.jpg"
+      image: "./products/farm-harvest-farmer.jpg",
+      author: "Bộ Phận Du Lịch Sinh Thái Nông Nghiệp",
+      readTime: "3 phút đọc",
+      content: [
+        "Nằm nép mình bên dòng kênh Thầy Cai hiền hòa, vườn dừa sinh thái của HTX Dừa Song Phú đang trở thành điểm đến lý tưởng cho những du khách yêu thích lối sống xanh và mong muốn tìm về thiên nhiên trong lành.",
+        "Đến đây, du khách được đội nón lá, mặc áo bà ba mộc mạc, chèo xuồng ba lá lướt nhẹ dưới bóng râm mát rượi của những hàng dừa trĩu quả. Bà con nông dân tận tình hướng dẫn du khách kỹ thuật phân biệt dừa xiêm lửa, dừa dứa, dừa sáp và tự tay hái dừa thưởng thức nước ngọt lịm ngay tại vườn.",
+        "Chuyến trải nghiệm khép lại bằng mâm cơm đồng quê đậm chất Tây Nam Bộ với ốc nướng tiêu, cá lóc nướng trui cuốn lá sen non và chè thạch dừa bionano thanh mát."
+      ]
     },
     {
       id: 8,
@@ -1061,7 +1111,14 @@ export const coopData = {
       category: "Bộ Sưu Tập",
       title: "NÔNG TRẠI DỪA SINH THÁI KHÔNG THUỐC DIỆT CỎ",
       desc: "Bà con nông dân nuôi thả ốc bươu và cá trong mương dừa để hạn chế sâu bọ, đồng thời cắt cỏ phủ gốc giữ ẩm giúp đất phù sa luôn tơi xốp màu mỡ.",
-      image: "./products/green-coconut.jpg"
+      image: "./products/green-coconut.jpg",
+      author: "Ban Canh Tác Hữu Cơ SOCOOP",
+      readTime: "4 phút đọc",
+      content: [
+        "Tại các vườn dừa thành viên của HTX Song Phú, nguyên tắc vàng trong canh tác là nói không 100% với thuốc trừ sâu hóa học và thuốc diệt cỏ diệt mầm độc hại. Thay vào đó, cỏ tự nhiên được cắt định kỳ bằng máy cầm tay rồi phủ trực tiếp quanh gốc dừa.",
+        "Lớp thảm cỏ phủ này vừa có tác dụng giữ ẩm đất trong mùa khô hạn, vừa thu hút giun đất và vi sinh vật có ích làm xốp đất, tạo mùn dinh dưỡng tự nhiên dồi dào cho bộ rễ dừa hô hấp khỏe mạnh.",
+        "Dưới các mương vườn, nguồn nước phù sa sông Tiền, sông Hậu được dẫn lưu thông đều đặn để nuôi thả cá tai tượng, cá sặc rằn và ốc bươu đen. Đây chính là hệ sinh thái cộng sinh hoàn hảo, giúp bảo vệ môi trường sống và cung cấp thêm nguồn thu nhập ổn định cho người nông dân."
+      ]
     },
     {
       id: 9,
@@ -1069,59 +1126,138 @@ export const coopData = {
       category: "Bộ Sưu Tập",
       title: "QUY TRÌNH XỬ LÝ DỪA THƯƠNG PHẨM XUẤT KHẨU",
       desc: "Từng trái dừa sau khi thu hái được cân đo độ ngọt brix, rửa sạch bằng nước ozon, dán tem QR truy xuất nguồn gốc số trước khi đóng thùng xốp.",
-      image: "./products/factory-cold-press.jpg"
+      image: "./products/factory-cold-press.jpg",
+      author: "Tổ Giám Sát Xuất Khẩu SOCOOP",
+      readTime: "4 phút đọc",
+      content: [
+        "Để đáp ứng các rào cản kỹ thuật khắt khe khi thâm nhập các thị trường khó tính như Nhật Bản, Hàn Quốc và EU, HTX Dừa Song Phú đã chuẩn hóa quy trình sơ chế đóng gói 6 bước chuẩn mực.",
+        "1. Thu hoạch đúng độ tuổi: Dùng dây thả chống va đập, loại bỏ quả nứt cuống.\n2. Phân loại & Đo lường: Cân trọng lượng chuẩn 900g - 1.2kg và kiểm tra độ brix đạt chuẩn ngọt mát.\n3. Rửa & Khử khuẩn: Sử dụng bể sục khí ozone nồng độ cao loại bỏ hoàn toàn vi khuẩn và nấm mốc bám ngoài vỏ.\n4. Đóng gói bảo hộ: Bọc màng sinh học và tem nhãn chống hàng giả tích hợp mã QR số hóa.\n5. Đóng thùng & Bảo quản: Xếp vào thùng carton chịu lực 5 lớp, đưa ngay vào kho lạnh tiền đông.\n6. Vận chuyển container lạnh: Kiểm soát nhiệt độ tự động 24/7 xuyên suốt hành trình giao hàng.",
+        "Sự tỉ mỉ và trách nhiệm trong từng khâu xử lý là lời khẳng định uy tín vững chắc của thương hiệu SOCOOP với mọi đối tác toàn cầu."
+      ]
     }
   ],
 
   // 8 chứng nhận như Ảnh 5
-    certifications: [
+  certifications: [
     {
       code: "VN-DNCB-0087",
       title: "MÃ VÙNG TRỒNG",
       desc: "Chứng nhận cấp mã số vùng trồng dừa xiêm và dừa sáp xuất khẩu chính ngạch: VN-DNCB-0087 do Cục Bảo vệ thực vật cấp.",
-      image: "./products/cert-ocop-diploma.jpg"
+      image: "./products/cert-ocop-diploma.jpg",
+      issuer: "Cục Bảo Vệ Thực Vật - Bộ Nông Nghiệp & PTNT",
+      scope: "Toàn bộ 120 ha vùng trồng dừa xiêm & dừa sáp hữu cơ tại xã Song Phú, tỉnh Vĩnh Long",
+      readTime: "3 phút đọc",
+      author: "Phòng Quản Lý Chất Lượng SOCOOP",
+      content: [
+        "Mã số vùng trồng (Planting Area Code) VN-DNCB-0087 là chứng chỉ định danh pháp lý quốc tế do Cục Bảo vệ Thực vật cấp cho Hợp tác xã Dừa Song Phú sau quá trình khảo sát, đánh giá thổ nhưỡng, nguồn nước và nhật ký canh tác thực tế.",
+        "Chứng nhận này là tấm 'visa' bắt buộc cho phép quả dừa xiêm Song Phú được xuất khẩu chính ngạch sang các thị trường lớn như Hoa Kỳ, Trung Quốc, EU và Australia mà không bị ách tắc hải quan.",
+        "Với mã số vùng trồng này, mọi lô hàng của HTX đều được giám sát dịch hại định kỳ, đảm bảo không có dư lượng thuốc bảo vệ thực vật và tuân thủ nghiêm ngặt các quy định kiểm dịch thực vật quốc tế."
+      ]
     },
     {
       code: "AFI-2024",
       title: "AFI STANDARD",
       desc: "Tiêu chuẩn quốc tế AFI Standard cho các sản phẩm cơm dừa sấy khô và phụ phẩm dừa xuất khẩu sang thị trường Bắc Mỹ.",
-      image: "./products/cert-iso-haccp.jpg"
+      image: "./products/cert-iso-haccp.jpg",
+      issuer: "Association of Food Industries (AFI - Hoa Kỳ)",
+      scope: "Dây chuyền chế biến cơm dừa sấy giòn, bột dừa hữu cơ và dầu dừa nguyên chất",
+      readTime: "3 phút đọc",
+      author: "Ban Hợp Tác Quốc Tế SOCOOP",
+      content: [
+        "Tiêu chuẩn AFI Standard của Hiệp hội Công nghiệp Thực phẩm Hoa Kỳ thiết lập các quy định chuẩn mực về độ ẩm, tỷ lệ tạp chất, kích cỡ hạt và chỉ số cảm quan cho nông sản chế biến sâu.",
+        "Việc đạt chứng nhận AFI giúp sản phẩm cơm dừa sấy giòn và các dòng phụ phẩm dừa của HTX Song Phú dễ dàng thâm nhập vào các chuỗi siêu thị phân phối thực phẩm lớn tại Mỹ và Canada.",
+        "HTX duy trì quy trình kiểm tra chất lượng tự động theo từng mẻ sấy, bảo đảm sản phẩm luôn giòn rụm, vàng ươm tự nhiên và đồng nhất về chất lượng xuất khẩu."
+      ]
     },
     {
       code: "VINACONTROL-01",
       title: "CHỨNG NHẬN VINACONTROL",
       desc: "Phiếu kết quả thử nghiệm vi sinh và dư lượng kim loại nặng 0.00% từ tổ chức giám định độc lập Vinacontrol.",
-      image: "./products/cert-iso-haccp.jpg"
+      image: "./products/cert-iso-haccp.jpg",
+      issuer: "Tập Đoàn Giám Định Độc Lập Vinacontrol",
+      scope: "Kiểm nghiệm toàn diện lý hóa, kim loại nặng, vi sinh cho 100% dòng sản phẩm SOCOOP",
+      readTime: "3 phút đọc",
+      author: "Phòng Kiểm Nghiệm Độc Lập",
+      content: [
+        "Kết quả giám định độc lập từ Vinacontrol khẳng định các sản phẩm nước dừa, dầu dừa và mật hoa dừa của HTX Song Phú đạt tỷ lệ 0.00% đối với chì, asen, thủy ngân và các vi sinh vật gây hại.",
+        "Đây là minh chứng rõ ràng nhất cho chất lượng nguồn nước ngầm và thổ nhưỡng phù sa trong lành của vùng đất Song Phú ven sông Măng Thít.",
+        "Định kỳ hàng quý, HTX chủ động gửi mẫu ngẫu nhiên từ nhà xưởng đến phòng xét nghiệm đạt chuẩn ISO/IEC 17025 để tái thẩm định chất lượng."
+      ]
     },
     {
       code: "ATTP-VL-2024",
       title: "CƠ SỞ AN TOÀN THỰC PHẨM",
       desc: "Giấy chứng nhận cơ sở đủ điều kiện an toàn thực phẩm trong sơ chế, chế biến và đóng gói nông sản do Chi cục QLCL Vĩnh Long cấp.",
-      image: "./products/cert-ocop-diploma.jpg"
+      image: "./products/cert-ocop-diploma.jpg",
+      issuer: "Chi cục Quản lý Chất lượng Nông Lâm sản & Thủy sản Vĩnh Long",
+      scope: "Khu xưởng sơ chế, đóng gói dừa quả và xưởng ép dầu thực vật SOCOOP",
+      readTime: "3 phút đọc",
+      author: "Ban An Toàn Vệ Sinh Lao Động SOCOOP",
+      content: [
+        "Giấy chứng nhận cơ sở đủ điều kiện an toàn thực phẩm xác nhận toàn bộ quy trình thiết kế nhà xưởng, hệ thống thoát nước, thiết bị inox và sức khỏe người lao động tại HTX Dừa Song Phú đều đạt chuẩn quy chuẩn kỹ thuật quốc gia.",
+        "Khu xưởng được phân khu một chiều chống nhiễm chéo từ khu vực sơ chế dừa thô đến khu vực đóng gói vô trùng thành phẩm.",
+        "Tất cả công nhân đều được khám sức khỏe định kỳ và đào tạo kiến thức an toàn thực phẩm nghiêm ngặt trước khi tham gia dây chuyền sản xuất."
+      ]
     },
     {
       code: "ISO-22000-2018",
       title: "TIÊU CHUẨN ISO 22000:2018",
       desc: "Hệ thống quản lý an toàn thực phẩm quốc tế cho phạm vi: Chế biến các loại nước dừa tươi, dầu dừa ly tâm và cơm dừa sấy.",
-      image: "./products/cert-iso-haccp.jpg"
+      image: "./products/cert-iso-haccp.jpg",
+      issuer: "Tổ chức Chứng nhận Quốc tế QMS / IAF",
+      scope: "Toàn bộ chuỗi sản xuất chế biến nông sản dừa xuất khẩu",
+      readTime: "4 phút đọc",
+      author: "Ban Thẩm Định ISO SOCOOP",
+      content: [
+        "ISO 22000:2018 là tiêu chuẩn quốc tế cao cấp kết hợp phương pháp quản lý rủi ro HACCP và hệ thống quản lý chất lượng ISO 9001.",
+        "Việc triển khai thành công ISO 22000 giúp HTX Song Phú kiểm soát toàn diện mọi mối nguy vật lý, hóa học và sinh học xuyên suốt từ khâu chọn nguyên liệu đầu vào đến khi sản phẩm tới tay người tiêu dùng.",
+        "Hệ thống cho phép truy vết lịch sử sản xuất của bất kỳ mẻ hàng nào chỉ trong vòng 60 giây qua cơ sở dữ liệu số hóa."
+      ]
     },
     {
       code: "HACCP-CERT",
       title: "TIÊU CHUẨN HACCP",
       desc: "Hệ thống phân tích mối nguy và điểm kiểm soát tới hạn theo tiêu chuẩn TCVN 5603:2008 cho toàn bộ dây chuyền sản xuất dừa.",
-      image: "./products/cert-iso-haccp.jpg"
+      image: "./products/cert-iso-haccp.jpg",
+      issuer: "Tổ chức Chứng nhận Hệ Thống Quản Lý An Toàn Thực Phẩm",
+      scope: "Dây chuyền ly tâm ép lạnh dầu dừa và sấy nông sản",
+      readTime: "3 phút đọc",
+      author: "Tổ Kiểm Soát Điểm Tới Hạn HACCP",
+      content: [
+        "HACCP (Hazard Analysis and Critical Control Points) là công cụ khoa học giúp xác định các điểm kiểm soát tới hạn (CCP) then chốt trong quá trình chế biến nông sản dừa.",
+        "Tại xưởng sản xuất SOCOOP, các điểm CCP bao gồm nhiệt độ buồng ly tâm, nồng độ khử khuẩn bồn sục ozone và độ ẩm buồng sấy chân không.",
+        "Các thông số này được cảm biến điện tử theo dõi liên tục 24/7, loại trừ hoàn toàn nguy cơ sai sót do thao tác thủ công."
+      ]
     },
     {
       code: "GS1-89385",
       title: "MÃ SỐ MÃ VẠCH GS1",
       desc: "Giấy chứng nhận quyền sử dụng mã số mã vạch quốc gia GS1 Việt Nam cho 100% dòng sản phẩm mang thương hiệu SOCOOP.",
-      image: "./products/cert-ocop-diploma.jpg"
+      image: "./products/cert-ocop-diploma.jpg",
+      issuer: "Viện Tiêu Chuẩn Chất Lượng Việt Nam - Tổng Cục Tiêu Chuẩn Đo Lường Chất Lượng",
+      scope: "Đầu mã số 893... định danh toàn bộ danh mục sản phẩm dừa Song Phú",
+      readTime: "3 phút đọc",
+      author: "Phòng Số Hóa & Quản Trị Dữ Liệu",
+      content: [
+        "Chứng nhận mã số mã vạch GS1 Việt Nam đảm bảo 100% sản phẩm của HTX Dừa Song Phú được định danh chuẩn mực quốc tế với tiền tố quốc gia 893.",
+        "Khách hàng có thể dễ dàng quét mã vạch qua các ứng dụng quét mã (iCheck, BarcodeViet, Google Lens) tại bất kỳ siêu thị nào để xác minh thông tin doanh nghiệp, giá niêm yết và tiêu chuẩn sản phẩm.",
+        "Hệ thống GS1 còn tích hợp trực tiếp vào phần mềm quản lý kho vận thông minh của HTX, tối ưu hóa tốc độ xuất nhập hàng."
+      ]
     },
     {
       code: "NOIP-VN-2024",
       title: "SỞ HỮU TRÍ TUỆ SOCOOP",
       desc: "Giấy chứng nhận đăng ký nhãn hiệu độc quyền HỢP TÁC XÃ DỪA SONG PHÚ do Cục Sở Hữu Trí Tuệ cấp bảo hộ toàn quốc.",
-      image: "./products/cert-ocop-diploma.jpg"
+      image: "./products/cert-ocop-diploma.jpg",
+      issuer: "Cục Sở Hữu Trí Tuệ - Bộ Khoa Học & Công Nghệ",
+      scope: "Bảo hộ nhãn hiệu thương hiệu, logo cây dừa tròn và slogan độc quyền trên toàn quốc",
+      readTime: "3 phút đọc",
+      author: "Ban Pháp Chế Hợp Tác Xã",
+      content: [
+        "Giấy chứng nhận đăng ký nhãn hiệu độc quyền xác lập quyền sở hữu trí tuệ hợp pháp của Hợp tác xã Dừa Song Phú đối với thương hiệu SOCOOP FARM cùng bộ nhận diện logo hình lá mầm xanh và biểu tượng cây dừa nước Tây Nam Bộ.",
+        "Văn bằng bảo hộ này bảo vệ người tiêu dùng khỏi các hành vi làm giả, nhái nhãn mác dừa Song Phú trôi nổi không rõ nguồn gốc trên thị trường.",
+        "Đây là nền tảng pháp lý vững chắc để HTX xây dựng chuỗi thương hiệu nông sản Việt vươn tầm xuất khẩu toàn cầu."
+      ]
     }
   ],
 

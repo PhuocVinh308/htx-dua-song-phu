@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 
-export default function CertificationsPage({ certifications }) {
+export default function CertificationsPage({ certifications = [], onArticleClick }) {
   return (
     <div className="bg-white min-h-screen py-10 font-sans">
       <div className="max-w-6xl mx-auto px-4">
@@ -18,7 +18,11 @@ export default function CertificationsPage({ certifications }) {
         {/* LƯỚI 3 CỘT CHỨNG NHẬN CHUẨN XÁC NHƯ ẢNH 5 */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {certifications.map((item) => (
-            <article key={item.code} className="space-y-3 group cursor-pointer">
+            <article
+              key={item.code}
+              onClick={() => onArticleClick && onArticleClick(item)}
+              className="space-y-3 group cursor-pointer"
+            >
               <div className="rounded-xl overflow-hidden aspect-[16/10] bg-gray-50 border border-gray-200 shadow-sm p-2 flex items-center justify-center">
                 <img
                   src={item.image}
@@ -43,10 +47,17 @@ export default function CertificationsPage({ certifications }) {
                 </p>
 
                 <div className="pt-1">
-                  <span className="inline-flex items-center gap-1 text-[11px] font-bold text-gray-800 group-hover:text-[#4fa32d] uppercase">
+                  <button
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      if (onArticleClick) onArticleClick(item);
+                    }}
+                    className="inline-flex items-center gap-1 text-[11px] font-bold text-gray-800 group-hover:text-[#4fa32d] hover:text-[#4fa32d] uppercase transition"
+                  >
                     <span>ĐỌC TIẾP</span>
                     <ArrowRight className="w-3.5 h-3.5" />
-                  </span>
+                  </button>
                 </div>
               </div>
             </article>

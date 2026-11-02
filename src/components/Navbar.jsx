@@ -9,9 +9,18 @@ export default function Navbar({
   activeTab,
   setActiveTab,
   onSelectCategory,
+  currentArticleCategory,
 }) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [productDropdownOpen, setProductDropdownOpen] = useState(false);
+
+  const isItemActive = (itemId) => {
+    if (activeTab === itemId) return true;
+    if (itemId === 'products' && activeTab === 'product-detail') return true;
+    if (itemId === 'collections' && activeTab === 'article-detail' && currentArticleCategory !== 'Chứng nhận') return true;
+    if (itemId === 'certifications' && activeTab === 'article-detail' && currentArticleCategory === 'Chứng nhận') return true;
+    return false;
+  };
 
   const navItems = [
     { id: 'home', label: 'TRANG CHỦ' },
@@ -143,7 +152,7 @@ export default function Navbar({
         <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
           <nav className="hidden lg:flex items-center mx-auto space-x-1 py-1.5 text-xs font-bold tracking-wider">
             {navItems.map((item) => {
-              const isActive = activeTab === item.id || (item.id === 'products' && activeTab === 'product-detail');
+              const isActive = isItemActive(item.id);
               return (
                 <div key={item.id} className="relative">
                   <button
@@ -212,7 +221,7 @@ export default function Navbar({
                   <button
                     onClick={() => handleNavClick(item.id)}
                     className={`w-full py-2.5 px-3 rounded-lg text-left transition ${
-                      activeTab === item.id || (item.id === 'products' && activeTab === 'product-detail') ? 'bg-[#4fa32d] text-white' : 'text-gray-700 hover:bg-gray-100'
+                      isItemActive(item.id) ? 'bg-[#4fa32d] text-white' : 'text-gray-700 hover:bg-gray-100'
                     }`}
                   >
                     {item.label}
