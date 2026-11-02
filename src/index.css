@@ -124,14 +124,15 @@ body {
   transform: scale(1.05);
 }
 
-/* Dải hình nền núi rừng & rặng dừa trước footer (như trong ảnh chụp) */
+/* Dải hình nền rặng dừa và sông nước nhẹ nhàng trước footer chuẩn ảnh mẫu */
 .footer-mountain-bg {
-  background-image: linear-gradient(to bottom, rgba(251, 251, 251, 0) 0%, rgba(15, 76, 58, 0.8) 50%, #0f4c3a 100%), 
+  background-image: linear-gradient(to bottom, rgba(251, 251, 251, 0.4) 0%, rgba(15, 76, 58, 0.85) 40%, #0f4c3a 100%), 
                     url('./assets/farm-coconut-grove.jpg');
   background-size: cover;
-  background-position: center bottom;
+  background-position: center 60%;
   background-repeat: no-repeat;
-  min-height: 260px;
+  min-height: 90px;
+  max-height: 120px;
 }
 
 /* Trợ lý AI CoCo */

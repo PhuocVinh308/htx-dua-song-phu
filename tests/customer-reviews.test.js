@@ -37,14 +37,4 @@ test('Customer Reviews & Ratings System Test Suite', async (t) => {
     assert.ok(html.includes('Viết đánh giá của bạn'), 'Must render write review action button');
     assert.ok(html.includes('Đã mua hàng tại HTX'), 'Must display verified purchase badges');
   });
-
-  await t.test('4. CustomerReviewsSection renders on Home Page with trust metrics', async () => {
-    const CustomerReviewsSection = await loadComponent('components/CustomerReviewsSection.jsx');
-    const html = renderToHtml(CustomerReviewsSection, { onExploreProducts: () => {} });
-
-    assert.ok(html.includes('Khách Hàng Nói Gì Về Chúng Tôi'), 'Must render section heading');
-    assert.ok(html.includes('Nguyễn Thị Thu Hà'), 'Must render customer testimonial');
-    assert.ok(html.includes('Trần Văn Hưng'), 'Must render business customer testimonial');
-    assert.ok(html.includes('4.9 / 5'), 'Must render average score banner');
-  });
 });

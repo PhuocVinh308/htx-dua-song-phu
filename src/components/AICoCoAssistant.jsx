@@ -197,13 +197,14 @@ export default function AICoCoAssistant({ knowledgeBase, products = [], onAddToC
       {/* Floating Action Button */}
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="coco-fab relative w-16 h-16 rounded-full bg-gradient-to-tr from-emerald-800 to-emerald-600 text-white flex items-center justify-center shadow-2xl transition transform hover:scale-105 active:scale-95 border-2 border-amber-300"
+        className="coco-fab group relative w-13 h-13 sm:w-14 sm:h-14 rounded-full bg-gradient-to-tr from-[#1b5e20] to-[#43a047] text-white flex items-center justify-center shadow-xl transition transform hover:scale-105 active:scale-95 border-2 border-white/90"
+        title="Trợ lý AI Bé CoCo"
       >
-        <span className="text-2xl animate-pulse">🥥</span>
-        <span className="absolute -top-1 -right-1 bg-amber-400 text-emerald-950 font-black text-[10px] px-1.5 py-0.5 rounded-full shadow border border-white">
+        <span className="text-xl sm:text-2xl">🥥</span>
+        <span className="absolute -top-1 -right-1 bg-amber-400 text-emerald-950 font-black text-[9px] px-1.5 py-0.2 rounded-full shadow border border-white">
           AI
         </span>
-        <span className="absolute right-20 whitespace-nowrap bg-emerald-950/90 text-white text-xs px-3 py-1.5 rounded-xl shadow-lg border border-emerald-700/60 hidden sm:block animate-bounce">
+        <span className="absolute right-16 opacity-0 group-hover:opacity-100 transition-opacity duration-200 pointer-events-none whitespace-nowrap bg-emerald-950/95 text-white text-xs px-3 py-1.5 rounded-xl shadow-lg border border-emerald-700/60 hidden sm:block">
           Hỏi Bé CoCo tư vấn dừa nhé! ✨
         </span>
       </button>

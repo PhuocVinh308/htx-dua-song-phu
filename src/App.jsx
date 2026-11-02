@@ -7,7 +7,6 @@ import WhyChooseUs from './components/WhyChooseUs.jsx';
 import ProductSection from './components/ProductSection.jsx';
 import ProductionGallery from './components/ProductionGallery.jsx';
 import NewsSection from './components/NewsSection.jsx';
-import CustomerReviewsSection from './components/CustomerReviewsSection.jsx';
 
 import AboutPage from './components/AboutPage.jsx';
 import ProductsPage from './components/ProductsPage.jsx';
@@ -24,7 +23,6 @@ import ArticleDetailPage from './components/ArticleDetailPage.jsx';
 import SearchModal from './components/SearchModal.jsx';
 import WishlistDrawer from './components/WishlistDrawer.jsx';
 import ProductCompareModal from './components/ProductCompareModal.jsx';
-import LiveOrderToast from './components/LiveOrderToast.jsx';
 import FloatingControls from './components/FloatingControls.jsx';
 import AICoCoAssistant from './components/AICoCoAssistant.jsx';
 import Footer from './components/Footer.jsx';
@@ -336,14 +334,6 @@ export default function App() {
                 handleViewArticle(item, 'home');
               }}
             />
-
-            {/* Đánh Giá & Nhận Xét Thực Tế Từ Khách Hàng */}
-            <CustomerReviewsSection
-              onExploreProducts={() => {
-                setActiveTab('products');
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-              }}
-            />
           </>
         )}
 
@@ -538,8 +528,6 @@ export default function App() {
         onClearCompare={handleClearCompare}
       />
 
-      {/* Live Social Proof Order Notification */}
-      <LiveOrderToast />
 
       {/* Floating Controls: Scroll To Top với vòng tròn tiến độ & Nút Quick Compare */}
       <FloatingControls
