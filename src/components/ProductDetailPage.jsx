@@ -57,13 +57,16 @@ export default function ProductDetailPage({
     .filter(p => p.id !== product.id && (p.category === product.category || Math.random() > 0.5))
     .slice(0, 4);
 
-  // Gallery hình ảnh phụ thực tế
-  const galleryThumbnails = [
+  // Gallery hình ảnh thực tế đa góc nhìn chuẩn nông nghiệp & chế biến
+  const galleryThumbnails = Array.from(new Set([
     product.image,
-    './products/diamond-coconut.jpg',
-    './products/green-coconut.jpg',
-    './products/virgin-coconut-oil.jpg',
-  ].filter(Boolean);
+    ...(product.gallery || []),
+    ...(product.category === 'my-pham' 
+      ? ['./products/virgin-coconut-oil.jpg', './products/coconut-soap.jpg', './products/coconut-lip-balm.jpg', './products/factory-cold-press.jpg']
+      : product.category === 'thu-cong' || product.category === 'vat-lieu'
+      ? ['./products/coconut-bowl.jpg', './products/woven-bag.jpg', './products/coconut-teaset.jpg', './products/farm-coir-drying.jpg']
+      : ['./products/farm-coconut-grove.jpg', './products/diamond-coconut.jpg', './products/green-coconut.jpg', './products/factory-processing.jpg'])
+  ])).filter(Boolean).slice(0, 4);
 
   const reviews = [
     {
