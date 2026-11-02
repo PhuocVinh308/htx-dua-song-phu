@@ -7,6 +7,7 @@ import WhyChooseUs from './components/WhyChooseUs.jsx';
 import ProductSection from './components/ProductSection.jsx';
 import ProductionGallery from './components/ProductionGallery.jsx';
 import NewsSection from './components/NewsSection.jsx';
+import CustomerReviewsSection from './components/CustomerReviewsSection.jsx';
 
 import AboutPage from './components/AboutPage.jsx';
 import ProductsPage from './components/ProductsPage.jsx';
@@ -98,9 +99,11 @@ export default function App() {
   const [compareModalOpen, setCompareModalOpen] = useState(false);
 
   const [searchModalOpen, setSearchModalOpen] = useState(false);
+  const [detailInitialTab, setDetailInitialTab] = useState('description');
 
-  const handleViewDetail = (product) => {
+  const handleViewDetail = (product, initialTab = 'description') => {
     setSelectedDetailProduct(product);
+    setDetailInitialTab(initialTab);
     setActiveTab('product-detail');
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
@@ -333,6 +336,14 @@ export default function App() {
                 handleViewArticle(item, 'home');
               }}
             />
+
+            {/* Đánh Giá & Nhận Xét Thực Tế Từ Khách Hàng */}
+            <CustomerReviewsSection
+              onExploreProducts={() => {
+                setActiveTab('products');
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+              }}
+            />
           </>
         )}
 
@@ -341,6 +352,7 @@ export default function App() {
           <ProductDetailPage
             product={selectedDetailProduct}
             allProducts={coopData.products}
+            initialTab={detailInitialTab}
             onBack={() => {
               setActiveTab('products');
               window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -352,6 +364,7 @@ export default function App() {
             }}
             onSelectProduct={(p) => {
               setSelectedDetailProduct(p);
+              setDetailInitialTab('description');
               window.scrollTo({ top: 0, behavior: 'smooth' });
             }}
             onTraceClick={handleTraceClick}

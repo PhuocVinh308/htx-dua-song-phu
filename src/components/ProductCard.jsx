@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, Scale } from 'lucide-react';
+import { Heart, Scale, Star } from 'lucide-react';
 
 export default function ProductCard({
   product,
@@ -70,6 +70,17 @@ export default function ProductCard({
       <h3 className="text-xs sm:text-[13px] font-bold text-gray-800 uppercase tracking-tight group-hover:text-[#3b7e28] transition line-clamp-2 min-h-[36px] flex items-center justify-center mb-1">
         {product.name}
       </h3>
+
+      {/* Đánh giá sao & Số lượt nhận xét */}
+      <div className="flex items-center justify-center gap-1 mb-1 text-[11px] text-amber-500 font-semibold" title={`Đánh giá: ${product.rating || '5.0'} / 5 sao (${product.reviewsCount || 28} nhận xét)`}>
+        <div className="flex items-center">
+          {[...Array(5)].map((_, i) => (
+            <Star key={i} className={`w-3 h-3 ${i < Math.floor(product.rating || 5) ? 'fill-current text-amber-400' : 'text-gray-300'}`} />
+          ))}
+        </div>
+        <span className="text-gray-700 font-bold ml-0.5">{product.rating || '5.0'}</span>
+        <span className="text-gray-400 text-[10px] font-normal">({product.reviewsCount || 28} đánh giá)</span>
+      </div>
 
       {/* Giá tiền niêm yết chuẩn e-commerce */}
       {product.price && (
