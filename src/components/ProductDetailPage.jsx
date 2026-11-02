@@ -57,12 +57,12 @@ export default function ProductDetailPage({
     .filter(p => p.id !== product.id && (p.category === product.category || Math.random() > 0.5))
     .slice(0, 4);
 
-  // Gallery hình ảnh phụ
+  // Gallery hình ảnh phụ thực tế
   const galleryThumbnails = [
     product.image,
-    'https://images.unsplash.com/photo-1544979590-37e9b47eb705?auto=format&fit=crop&w=600&q=80',
-    'https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=600&q=80',
-    'https://images.unsplash.com/photo-1587411768638-ec71f8e33b78?auto=format&fit=crop&w=600&q=80',
+    './products/diamond-coconut.jpg',
+    './products/green-coconut.jpg',
+    './products/virgin-coconut-oil.jpg',
   ].filter(Boolean);
 
   const reviews = [

@@ -8,42 +8,42 @@ export function createProductionGallery() {
     {
       title: "Rặng dừa xiêm bãi bồi ven sông Măng Thít",
       category: "Vùng Trồng",
-      image: "https://images.unsplash.com/photo-1544979590-37e9b47eb705?auto=format&fit=crop&w=800&q=80"
+      image: "./products/farm-coconut-grove.jpg"
     },
     {
       title: "Khâu tuyển chọn trái dừa già đạt độ béo cao",
       category: "Thu Hoạch",
-      image: "https://images.unsplash.com/photo-1587411768638-ec71f8e33b78?auto=format&fit=crop&w=800&q=80"
+      image: "./products/farm-coconut-grove.jpg"
     },
     {
       title: "Hệ thống máy ép ly tâm 3 pha không sinh nhiệt",
       category: "Chế Biến Sâu",
-      image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=800&q=80"
+      image: "./products/farm-coconut-grove.jpg"
     },
     {
       title: "Tạo hình dừa gọt kim cương hút chân không xuất khẩu",
       category: "Đóng Gói",
-      image: "https://images.unsplash.com/photo-1520072959219-c595dc870360?auto=format&fit=crop&w=800&q=80"
+      image: "./products/farm-coconut-grove.jpg"
     },
     {
       title: "Nghệ nhân mài bóng gáo dừa thủ công mỹ nghệ",
       category: "Làng Nghề",
-      image: "https://images.unsplash.com/photo-1590402494682-cd3fb53b1f70?auto=format&fit=crop&w=800&q=80"
+      image: "./products/farm-coconut-grove.jpg"
     },
     {
       title: "Ủ vi sinh nấm Trichoderma cho giá thể mụn dừa nở",
       category: "Kinh Tế Tuần Hoàn",
-      image: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=800&q=80"
+      image: "./products/farm-coconut-grove.jpg"
     },
     {
       title: "Nấu xà phòng thảo dược dầu dừa theo phương pháp nguội",
       category: "Mỹ Phẩm Xanh",
-      image: "https://images.unsplash.com/photo-1607006483702-3b8c31273934?auto=format&fit=crop&w=800&q=80"
+      image: "./products/farm-coconut-grove.jpg"
     },
     {
       title: "Xã viên phấn khởi bên vụ mùa dừa trĩu quả OCOP",
       category: "Đời Sống Xã Viên",
-      image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=800&q=80"
+      image: "./products/farm-coconut-grove.jpg"
     }
   ];
 

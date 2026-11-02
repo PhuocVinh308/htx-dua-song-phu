@@ -70,7 +70,7 @@ export function createAboutSection(coopInfo) {
           <div class="relative mx-auto max-w-md lg:max-w-none">
             <!-- Ảnh Lớn Chính (Vườn dừa Tam Bình) -->
             <div class="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
-              <img src="https://images.unsplash.com/photo-1544979590-37e9b47eb705?auto=format&fit=crop&w=800&q=80" 
+              <img src="./products/farm-coconut-grove.jpg" 
                    alt="Vườn dừa Hợp tác xã Dừa Song Phú" 
                    class="w-full h-[380px] object-cover hover:scale-105 transition duration-700">
               
@@ -87,7 +87,7 @@ export function createAboutSection(coopInfo) {
 
             <!-- Ảnh Phụ Nhỏ đè góc (Chế biến dừa OCOP) -->
             <div class="hidden sm:block absolute -bottom-8 -left-8 w-48 rounded-xl overflow-hidden shadow-2xl border-4 border-white bg-white">
-              <img src="https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=400&q=80" 
+              <img src="./products/farm-coconut-grove.jpg" 
                    alt="Dầu dừa ly tâm Song Phú" 
                    class="w-full h-28 object-cover">
               <div class="p-2 text-center bg-white">

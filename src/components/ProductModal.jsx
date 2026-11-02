@@ -28,7 +28,7 @@ export default function ProductModal({ product, onClose, onAddToCart, onTraceCli
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 items-start">
           <div className="relative aspect-square rounded-2xl overflow-hidden bg-gray-100 shadow-md">
             <img
-              src={product.image || 'https://images.unsplash.com/photo-1544979590-37e9b47eb705?auto=format&fit=crop&w=600&q=80'}
+              src={product.image || './products/diamond-coconut.jpg'}
               alt={product.name || 'Sản phẩm'}
               className="w-full h-full object-cover"
             />

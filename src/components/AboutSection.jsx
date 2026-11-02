@@ -15,7 +15,7 @@ export default function AboutSection({ coopInfo, onMoreClick }) {
               {/* Ảnh chính: Chùm dừa xanh dán tem tròn */}
               <div className="relative rounded-2xl overflow-hidden shadow-lg border-2 border-white bg-white">
                 <img
-                  src="https://images.unsplash.com/photo-1544979590-37e9b47eb705?auto=format&fit=crop&w=700&q=80"
+                  src="./products/green-coconut.jpg"
                   alt="Dừa Song Phú"
                   className="w-full h-64 sm:h-80 object-cover"
                 />
@@ -28,10 +28,10 @@ export default function AboutSection({ coopInfo, onMoreClick }) {
                 </div>
               </div>
 
-              {/* Ảnh phụ đè góc dưới: Công nhân chế biến (như Ảnh 1) */}
+              {/* Ảnh phụ đè góc dưới: Dừa xiêm kim cương chế biến */}
               <div className="absolute -bottom-6 -right-4 sm:-bottom-8 sm:-right-6 w-44 sm:w-52 rounded-xl overflow-hidden shadow-xl border-4 border-white bg-white">
                 <img
-                  src="https://images.unsplash.com/photo-1587411768638-ec71f8e33b78?auto=format&fit=crop&w=400&q=80"
+                  src="./products/diamond-coconut.jpg"
                   alt="Sản xuất chế biến dừa"
                   className="w-full h-24 sm:h-32 object-cover"
                 />

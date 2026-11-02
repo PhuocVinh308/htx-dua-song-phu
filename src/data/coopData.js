@@ -32,7 +32,7 @@ export const coopData = {
     subtitle: "Welcome to Song Phu farm",
     title: "BEST PRODUCT FOR YOU",
     desc: "Chúng tôi đảm bảo cho khách hàng của chúng tôi luôn có được sản phẩm tốt nhất và an toàn nhất từ vùng đất phù sa trù phú ven sông Măng Thít.",
-    bgImage: "https://images.unsplash.com/photo-1544979590-37e9b47eb705?auto=format&fit=crop&w=1920&q=80",
+    bgImage: "./products/farm-coconut-grove.jpg",
     btnText: "Xem thêm"
   },
 
@@ -119,7 +119,7 @@ export const coopData = {
       category: "thuc-pham",
       price: 55000,
       originalPrice: 65000,
-      image: "./products/coconut-flour.jpg",
+      image: "./products/golden-coconut-flour.jpg",
       badge: "BÁN CHẠY",
       badgeColor: "bg-amber-600",
       tagline: "Hương vị đậm đà thơm béo - Nguồn năng lượng lành mạnh",
@@ -143,7 +143,7 @@ export const coopData = {
       category: "thuc-pham",
       price: 65000,
       originalPrice: 78000,
-      image: "./products/coconut-flour.jpg",
+      image: "./products/diet-coconut-powder.jpg",
       badge: "KETO / DIET",
       badgeColor: "bg-purple-600",
       tagline: "Chỉ số đường huyết thấp - Giải pháp vàng cho người ăn kiêng",
@@ -448,30 +448,174 @@ export const coopData = {
       traceBatch: "SP-DXL-2026-01",
       rating: 4.8,
       reviewsCount: 53
+    },
+    {
+      id: "P17",
+      name: "Nước dừa xiêm đóng lon Song Phú 330ml",
+      category: "trai-cay-tuoi",
+      price: 25000,
+      originalPrice: 30000,
+      image: "./products/canned-coconut-water.jpg",
+      badge: "TIỆN ÍCH",
+      badgeColor: "bg-emerald-600",
+      tagline: "Nước dừa tươi tiệt trùng UHT - Giữ trọn vị ngọt thanh",
+      desc: "Nước dừa xiêm xanh Song Phú đóng lon nhôm tiệt trùng UHT, không đường hóa học, giàu chất điện giải tự nhiên.",
+      shortDesc: "Đóng lon nắp giật tiện lợi từ 100% nước dừa xiêm tươi, bổ sung khoáng bù nước tức thì sau khi vận động.",
+      unit: "lon 330ml",
+      features: [
+        "100% nước dừa tươi nguyên chất đóng lon tiệt trùng",
+        "Bảo toàn khoáng chất bù điện giải Kali & Magie",
+        "Không thêm đường tinh luyện, vị ngọt thanh tự nhiên",
+        "Tiện lợi mang theo khi du lịch, tập gym và làm việc"
+      ],
+      farmerName: "Xưởng chế biến sâu HTX Song Phú",
+      traceBatch: "SP-DXL-2026-01",
+      rating: 5.0,
+      reviewsCount: 78
+    },
+    {
+      id: "P18",
+      name: "Thạch dừa tươi Bionano lên men sinh học",
+      category: "thuc-pham",
+      price: 32000,
+      originalPrice: 40000,
+      image: "./products/nata-de-coco.jpg",
+      badge: "MỚI",
+      badgeColor: "bg-teal-600",
+      tagline: "Cellulose sinh học tự nhiên - Giòn sần sật thanh mát",
+      desc: "Lên men vi sinh tự nhiên từ nước dừa già Song Phú, tạo cấu trúc thạch dẻo giòn thanh mát cho món tráng miệng.",
+      shortDesc: "Thạch dừa trong suốt như pha lê, ngậm nước thanh mát, giàu chất xơ sinh học hỗ trợ hệ tiêu hóa khỏe mạnh.",
+      unit: "hũ 500g",
+      features: [
+        "Lên men tự nhiên bằng chủng vi sinh Acetobacter xylinum",
+        "Không ngâm hóa chất tẩy trắng, trong suốt tự nhiên",
+        "Hàm lượng calo thấp, giàu chất xơ cellulose sinh học",
+        "Món tráng miệng tuyệt vời khi ăn cùng sữa chua và trái cây"
+      ],
+      farmerName: "Tổ chế biến phụ phẩm sinh học Song Phú",
+      traceBatch: "SP-DDL-2026-03",
+      rating: 4.9,
+      reviewsCount: 43
+    },
+    {
+      id: "P19",
+      name: "Than gáo dừa nén BBQ không khói",
+      category: "vat-lieu",
+      price: 35000,
+      originalPrice: 45000,
+      image: "./products/coconut-charcoal.jpg",
+      badge: "XUẤT KHẨU",
+      badgeColor: "bg-stone-700",
+      tagline: "Nhiệt lượng cao cháy bền 3-4 giờ - Không khói, không mùi",
+      desc: "Nung yếm khí từ gáo dừa già khô, ép lục giác rỗng tâm, chuyên dùng nướng BBQ nhà hàng và xông ấm gia đình.",
+      shortDesc: "Sản phẩm năng lượng xanh tái sinh từ phụ phẩm gáo dừa, giữ nhiệt độ trên 650°C kéo dài không sinh tro độc.",
+      unit: "hộp 2kg",
+      features: [
+        "100% gáo dừa tự nhiên, hoàn toàn không pha than đá",
+        "Không sinh khói, không bốc mùi cay mắt khi nướng",
+        "Thời gian cháy ổn định 3 - 4 giờ liên tục",
+        "Lượng tro thải cực thấp dưới 3%, an toàn thực phẩm"
+      ],
+      farmerName: "Xưởng than sinh học HTX Song Phú",
+      traceBatch: "SP-DXL-2026-01",
+      rating: 4.9,
+      reviewsCount: 62
+    },
+    {
+      id: "P20",
+      name: "Xà phòng sinh học dầu dừa & cám gạo",
+      category: "my-pham",
+      price: 48000,
+      originalPrice: 58000,
+      image: "./products/coconut-soap.jpg",
+      badge: "ORGANIC",
+      badgeColor: "bg-emerald-700",
+      tagline: "Xà phòng hóa lạnh thủ công - Dưỡng ẩm mềm mịn da",
+      desc: "Chế tác thủ công từ dầu dừa ép ly tâm Song Phú và cám gạo phù sa, làm sạch dịu nhẹ không khô ráp da.",
+      shortDesc: "Bánh xà phòng thiên nhiên tạo bọt mịn tơi, bổ sung vitamin E và axit lauric bảo vệ lớp màng ẩm tự nhiên của da.",
+      unit: "bánh 100g",
+      features: [
+        "Phương pháp xà phòng hóa lạnh (cold-process) bảo toàn dưỡng chất",
+        "Giàu Glycerin thực vật tự nhiên dưỡng ẩm sâu",
+        "Không chứa hóa chất tạo bọt SLS/SLES hay hương liệu nhân tạo",
+        "Thích hợp cho cả làn da nhạy cảm và em bé"
+      ],
+      farmerName: "Tổ mỹ nghệ nữ công Song Phú",
+      traceBatch: "SP-DDL-2026-03",
+      rating: 5.0,
+      reviewsCount: 89
+    },
+    {
+      id: "P21",
+      name: "Mứt dừa non hoa dừa truyền thống",
+      category: "thuc-pham",
+      price: 68000,
+      originalPrice: 80000,
+      image: "./products/coconut-jam.jpg",
+      badge: "ĐẶC SẢN TẾT",
+      badgeColor: "bg-amber-600",
+      tagline: "Cơm dừa dẻo mềm ướp mật hoa dừa - Ngọt thanh tao nhã",
+      desc: "Sợi dừa non bánh tẻ dẻo mềm sên chậm cùng mật hoa dừa tự nhiên, vị ngọt thanh không gắt, thơm ngát mùi dừa quê.",
+      shortDesc: "Món quà quê Nam Bộ thơm thảo cho ngày sum vầy, chế biến hoàn toàn không đường hóa học hay chất tẩy trắng.",
+      unit: "hộp 250g",
+      features: [
+        "Tuyển chọn 100% cơm dừa non vừa tới độ dẻo mềm",
+        "Vị ngọt thanh đượm hương hổ phách từ mật hoa dừa tự nhiên",
+        "Không dùng phẩm màu, không chất bảo quản công nghiệp",
+        "Bao bì hộp giấy mộc sang trọng làm quà biếu ý nghĩa"
+      ],
+      farmerName: "Nông hộ Cô Tư Mai (Ấp Song Thạnh)",
+      traceBatch: "SP-MHD-2026-02",
+      rating: 4.9,
+      reviewsCount: 104
+    },
+    {
+      id: "P22",
+      name: "Nến thơm sáp dừa tự nhiên gáo dừa",
+      category: "thu-cong",
+      price: 95000,
+      originalPrice: 120000,
+      image: "./products/coconut-candle.jpg",
+      badge: "LIFESTYLE",
+      badgeColor: "bg-amber-800",
+      tagline: "Sáp dừa thuần khiết bấc gỗ - Tinh dầu sả chanh thư giãn",
+      desc: "Đổ trong vỏ gáo dừa mộc mạc, bấc gỗ tạo tiếng nổ lách tách ấm cúng, khuếch tán tinh dầu sả chanh thư giãn tinh thần.",
+      shortDesc: "Sản phẩm sống chậm eco-chic, sáp dừa tự nhiên đốt sạch không sinh muội đen, thanh lọc không gian sống.",
+      unit: "hũ gáo dừa",
+      features: [
+        "100% sáp dừa tự nhiên kết hợp tinh dầu thực vật nguyên chất",
+        "Bấc gỗ tự nhiên phát tiếng reo tí tách ấm cúng",
+        "Thời gian cháy liên tục tới 35 - 40 giờ",
+        "Vỏ gáo dừa tái sử dụng làm chậu sen đá sau khi thắp hết"
+      ],
+      farmerName: "Tổ thủ công mỹ nghệ Song Phú",
+      traceBatch: "SP-DXL-2026-01",
+      rating: 5.0,
+      reviewsCount: 56
     }
   ],
 
   // 8 ảnh sản xuất thực tế xếp 2 hàng x 4 cột như Ảnh 1
-  productionImages: [
-    { title: "Vựa thu mua dừa tươi xã viên", image: "https://images.unsplash.com/photo-1544979590-37e9b47eb705?auto=format&fit=crop&w=600&q=80" },
-    { title: "Khu vực phân loại dừa theo tiêu chuẩn OCOP", image: "https://images.unsplash.com/photo-1587411768638-ec71f8e33b78?auto=format&fit=crop&w=600&q=80" },
-    { title: "Xe container lạnh đóng dừa xuất khẩu", image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=600&q=80" },
-    { title: "Khu giàn phơi xơ dừa sinh thái", image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=600&q=80" },
-    { title: "Xưởng đóng gói bảo quản mát", image: "https://images.unsplash.com/photo-1520072959219-c595dc870360?auto=format&fit=crop&w=600&q=80" },
-    { title: "Kiểm tra chất lượng cơm dừa trước ép ly tâm", image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=600&q=80" },
-    { title: "Bao buồng dừa xiêm hữu cơ trên cây", image: "https://images.unsplash.com/photo-1544979590-37e9b47eb705?auto=format&fit=crop&w=600&q=80" },
-    { title: "Vườn dừa mẫu VietGAP xã Song Phú", image: "https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?auto=format&fit=crop&w=600&q=80" }
+    productionImages: [
+    { title: "Vựa thu mua dừa tươi xã viên", image: "./products/farm-coconut-grove.jpg" },
+    { title: "Khu vực phân loại dừa theo tiêu chuẩn OCOP", image: "./products/factory-processing.jpg" },
+    { title: "Xe container lạnh đóng dừa xuất khẩu", image: "./products/diamond-coconut.jpg" },
+    { title: "Khu giàn phơi xơ dừa sinh thái", image: "./products/farm-coir-drying.jpg" },
+    { title: "Xưởng đóng gói bảo quản mát", image: "./products/factory-processing.jpg" },
+    { title: "Kiểm tra chất lượng cơm dừa trước ép ly tâm", image: "./products/factory-cold-press.jpg" },
+    { title: "Bao buồng dừa xiêm hữu cơ trên cây", image: "./products/farm-harvest-farmer.jpg" },
+    { title: "Vườn dừa mẫu VietGAP xã Song Phú", image: "./products/farm-flower-nectar.jpg" }
   ],
 
   // 9 bài viết Bộ Sưu Tập như Ảnh 4
-  collections: [
+    collections: [
     {
       id: 1,
       date: "August 7, 2026",
       category: "Bộ Sưu Tập",
       title: "VIỆT NAM LÀ THỊ TRƯỜNG CUNG CẤP CÁC SẢN PHẨM DỪA XẾP THỨ HÀNG ĐẦU CHO HOA KỲ",
       desc: "Các sản phẩm dừa chế biến sâu của Đồng bằng sông Cửu Long đang được người tiêu dùng quốc tế đặc biệt ưa chuộng nhờ hương vị tự nhiên và giá trị dinh dưỡng cao.",
-      image: "https://images.unsplash.com/photo-1544979590-37e9b47eb705?auto=format&fit=crop&w=700&q=80"
+      image: "./products/diamond-coconut.jpg"
     },
     {
       id: 2,
@@ -479,7 +623,7 @@ export const coopData = {
       category: "Bộ Sưu Tập",
       title: "DẦU DỪA ÉP LẠNH LY TÂM ĐƯỢC NGƯỜI TIÊU DÙNG ANH ĐÓN NHẬN TÍCH CỰC",
       desc: "Lô hàng dầu dừa nguyên chất không gia nhiệt của HTX Dừa Song Phú được đánh giá cao tại các hội chợ nông sản hữu cơ London nhờ giữ trọn axit lauric tự nhiên.",
-      image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=700&q=80"
+      image: "./products/factory-cold-press.jpg"
     },
     {
       id: 3,
@@ -487,7 +631,7 @@ export const coopData = {
       category: "Bộ Sưu Tập",
       title: "MẬT HOA DỪA CÓ CÔNG DỤNG GÌ? NHỮNG LỢI ÍCH TUYỆT VỜI CHO SỨC KHỎE",
       desc: "Mật hoa dừa là chất tạo ngọt thực dưỡng tự nhiên có chỉ số đường huyết thấp, giàu khoáng chất Kali và Magie, bảo vệ tim mạch và nâng cao sức đề kháng.",
-      image: "https://images.unsplash.com/photo-1587411768638-ec71f8e33b78?auto=format&fit=crop&w=700&q=80"
+      image: "./products/farm-flower-nectar.jpg"
     },
     {
       id: 4,
@@ -495,7 +639,7 @@ export const coopData = {
       category: "Bộ Sưu Tập",
       title: "DỪA SÁP CẤY PHÔI TAM BÌNH: ĐẶC SẢN THƯỢNG HẠNG VƯƠN XA",
       desc: "Kỹ thuật cấy phôi tiên tiến giúp tỷ lệ sáp đạt trên 85%, mở ra cơ hội làm giàu mới cho các hộ nông dân trồng dừa trên vùng đất phù sa bãi bồi Song Phú.",
-      image: "https://images.unsplash.com/photo-1520072959219-c595dc870360?auto=format&fit=crop&w=700&q=80"
+      image: "./products/wax-coconut.jpg"
     },
     {
       id: 5,
@@ -503,7 +647,7 @@ export const coopData = {
       category: "Bộ Sưu Tập",
       title: "BẢO QUẢN VÀ CHẾ BIẾN DỪA XIÊM SAU THU HOẠCH",
       desc: "Công nghệ gọt kim cương và bọc màng sinh học giúp bảo quản dừa tươi giữ nguyên độ ngọt mát trong 45 ngày mà không dùng bất kỳ hóa chất tẩy trắng nào.",
-      image: "https://images.unsplash.com/photo-1544979590-37e9b47eb705?auto=format&fit=crop&w=700&q=80"
+      image: "./products/factory-processing.jpg"
     },
     {
       id: 6,
@@ -511,7 +655,7 @@ export const coopData = {
       category: "Bộ Sưu Tập",
       title: "THAM QUAN NÔNG TRẠI DỪA CỦA HTX DỪA SONG PHÚ",
       desc: "Đoàn đại biểu các tỉnh bạn ghé thăm mô hình kinh tế tuần hoàn và chuỗi giá trị dừa sạch không rác thải tại xã Song Phú, huyện Tam Bình.",
-      image: "https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?auto=format&fit=crop&w=700&q=80"
+      image: "./products/farm-coconut-grove.jpg"
     },
     {
       id: 7,
@@ -519,7 +663,7 @@ export const coopData = {
       category: "Bộ Sưu Tập",
       title: "TRẢI NGHIỆM VƯỜN DỪA HỮU CƠ VEN KINH THẦY CAI",
       desc: "Du khách trong và ngoài nước thích thú trải nghiệm chèo xuồng ba lá, tự tay hái dừa xiêm ngọt lịm và thưởng thức các món ăn dân dã miệt vườn Nam Bộ.",
-      image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=700&q=80"
+      image: "./products/farm-harvest-farmer.jpg"
     },
     {
       id: 8,
@@ -527,7 +671,7 @@ export const coopData = {
       category: "Bộ Sưu Tập",
       title: "NÔNG TRẠI DỪA SINH THÁI KHÔNG THUỐC DIỆT CỎ",
       desc: "Bà con nông dân nuôi thả ốc bươu và cá trong mương dừa để hạn chế sâu bọ, đồng thời cắt cỏ phủ gốc giữ ẩm giúp đất phù sa luôn tơi xốp màu mỡ.",
-      image: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=700&q=80"
+      image: "./products/green-coconut.jpg"
     },
     {
       id: 9,
@@ -535,59 +679,59 @@ export const coopData = {
       category: "Bộ Sưu Tập",
       title: "QUY TRÌNH XỬ LÝ DỪA THƯƠNG PHẨM XUẤT KHẨU",
       desc: "Từng trái dừa sau khi thu hái được cân đo độ ngọt brix, rửa sạch bằng nước ozon, dán tem QR truy xuất nguồn gốc số trước khi đóng thùng xốp.",
-      image: "https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?auto=format&fit=crop&w=700&q=80"
+      image: "./products/factory-cold-press.jpg"
     }
   ],
 
   // 8 chứng nhận như Ảnh 5
-  certifications: [
+    certifications: [
     {
       code: "VN-DNCB-0087",
       title: "MÃ VÙNG TRỒNG",
       desc: "Chứng nhận cấp mã số vùng trồng dừa xiêm và dừa sáp xuất khẩu chính ngạch: VN-DNCB-0087 do Cục Bảo vệ thực vật cấp.",
-      image: "https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?auto=format&fit=crop&w=600&q=80"
+      image: "./products/cert-ocop-diploma.jpg"
     },
     {
       code: "AFI-2024",
       title: "AFI STANDARD",
       desc: "Tiêu chuẩn quốc tế AFI Standard cho các sản phẩm cơm dừa sấy khô và phụ phẩm dừa xuất khẩu sang thị trường Bắc Mỹ.",
-      image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=600&q=80"
+      image: "./products/cert-iso-haccp.jpg"
     },
     {
       code: "VINACONTROL-01",
       title: "CHỨNG NHẬN VINACONTROL",
       desc: "Phiếu kết quả thử nghiệm vi sinh và dư lượng kim loại nặng 0.00% từ tổ chức giám định độc lập Vinacontrol.",
-      image: "https://images.unsplash.com/photo-1587411768638-ec71f8e33b78?auto=format&fit=crop&w=600&q=80"
+      image: "./products/cert-iso-haccp.jpg"
     },
     {
       code: "ATTP-VL-2024",
       title: "CƠ SỞ AN TOÀN THỰC PHẨM",
       desc: "Giấy chứng nhận cơ sở đủ điều kiện an toàn thực phẩm trong sơ chế, chế biến và đóng gói nông sản do Chi cục QLCL Vĩnh Long cấp.",
-      image: "https://images.unsplash.com/photo-1520072959219-c595dc870360?auto=format&fit=crop&w=600&q=80"
+      image: "./products/cert-ocop-diploma.jpg"
     },
     {
       code: "ISO-22000-2018",
       title: "TIÊU CHUẨN ISO 22000:2018",
       desc: "Hệ thống quản lý an toàn thực phẩm quốc tế cho phạm vi: Chế biến các loại nước dừa tươi, dầu dừa ly tâm và cơm dừa sấy.",
-      image: "https://images.unsplash.com/photo-1544979590-37e9b47eb705?auto=format&fit=crop&w=600&q=80"
+      image: "./products/cert-iso-haccp.jpg"
     },
     {
       code: "HACCP-CERT",
       title: "TIÊU CHUẨN HACCP",
       desc: "Hệ thống phân tích mối nguy và điểm kiểm soát tới hạn theo tiêu chuẩn TCVN 5603:2008 cho toàn bộ dây chuyền sản xuất dừa.",
-      image: "https://images.unsplash.com/photo-1590402494682-cd3fb53b1f70?auto=format&fit=crop&w=600&q=80"
+      image: "./products/cert-iso-haccp.jpg"
     },
     {
       code: "GS1-89385",
       title: "MÃ SỐ MÃ VẠCH GS1",
       desc: "Giấy chứng nhận quyền sử dụng mã số mã vạch quốc gia GS1 Việt Nam cho 100% dòng sản phẩm mang thương hiệu SOCOOP.",
-      image: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=600&q=80"
+      image: "./products/cert-ocop-diploma.jpg"
     },
     {
       code: "NOIP-VN-2024",
       title: "SỞ HỮU TRÍ TUỆ SOCOOP",
       desc: "Giấy chứng nhận đăng ký nhãn hiệu độc quyền HỢP TÁC XÃ DỪA SONG PHÚ do Cục Sở Hữu Trí Tuệ cấp bảo hộ toàn quốc.",
-      image: "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?auto=format&fit=crop&w=600&q=80"
+      image: "./products/cert-ocop-diploma.jpg"
     }
   ],
 

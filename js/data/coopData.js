@@ -38,7 +38,7 @@ export const coopData = {
       desc: "Quy tụ hơn 165 hộ nông dân chuyên canh theo tiêu chuẩn hữu cơ sinh thái, tạo ra những sản phẩm từ dừa đạt chuẩn OCOP 4 sao và tiêu chuẩn xuất khẩu quốc tế.",
       btnText: "Khám Phá Sản Phẩm",
       btnLink: "#products",
-      bgImage: "https://images.unsplash.com/photo-1544979590-37e9b47eb705?auto=format&fit=crop&w=1920&q=80",
+      bgImage: "./products/farm-coconut-grove.jpg",
       accent: "100% Thuần Tự Nhiên"
     },
     {
@@ -49,7 +49,7 @@ export const coopData = {
       desc: "Từ cơm dừa, nước dừa, gáo dừa cho đến vỏ xơ dừa đều được ứng dụng công nghệ ép lạnh ly tâm, than sinh học và giá thể hữu cơ thân thiện tuyệt đối với môi trường.",
       btnText: "Mô Hình Tuần Hoàn",
       btnLink: "#circular-economy",
-      bgImage: "https://images.unsplash.com/photo-1587411768638-ec71f8e33b78?auto=format&fit=crop&w=1920&q=80",
+      bgImage: "./products/farm-coconut-grove.jpg",
       accent: "Kinh Tế Xanh Bền Vững"
     },
     {
@@ -60,7 +60,7 @@ export const coopData = {
       desc: "Quét mã QR để xem ngay lý lịch cây dừa, nhật ký bón phân sinh học của từng hộ xã viên tại Xã Song Phú, kết quả kiểm định an toàn và chứng nhận OCOP 4 sao.",
       btnText: "Tra Cứu Lô Hàng",
       btnLink: "#traceability",
-      bgImage: "https://images.unsplash.com/photo-1520072959219-c595dc870360?auto=format&fit=crop&w=1920&q=80",
+      bgImage: "./products/farm-coconut-grove.jpg",
       accent: "Chuẩn VietGAP & OCOP"
     }
   ],
@@ -255,7 +255,7 @@ export const coopData = {
       isFeatured: false,
       badge: "MỸ PHẨM XANH",
       badgeColor: "bg-rose-600",
-      image: "https://images.unsplash.com/photo-1607006483702-3b8c31273934?auto=format&fit=crop&w=800&q=80",
+      image: "./products/farm-coconut-grove.jpg",
       tagline: "Dưỡng ẩm tự nhiên, tạo bọt xốp mịn từ phản ứng xà phòng hóa lạnh",
       shortDesc: "Bánh xà phòng thủ công nấu từ 70% dầu dừa nguyên chất Song Phú kết hợp tinh chất cám gạo hữu cơ và tinh dầu sả chanh. Làm sạch da dịu nhẹ mà không gây cảm giác căng rát.",
       features: [
@@ -330,7 +330,7 @@ export const coopData = {
       labTest: "Dư lượng thuốc BVTV: 0.00 ppm; Độ ngọt Brix: 8.8°; Coliforms: Không phát hiện",
       auditor: "Trung tâm Giám định Chất lượng Nông sản Miền Tây",
       blockchainTx: "0x8fa1b98c37d4...e901a4b (Mã xác thực số bảo an)",
-      image: "https://images.unsplash.com/photo-1544979590-37e9b47eb705?auto=format&fit=crop&w=600&q=80"
+      image: "./products/farm-coconut-grove.jpg"
     },
     "SP-DDL-2026-03": {
       batchCode: "SP-DDL-2026-03",
@@ -347,7 +347,7 @@ export const coopData = {
       labTest: "Hàm lượng Acid Lauric: 52.4%; Chỉ số Acid peroxide: 0.12 meq/kg; Độ ẩm: 0.04%",
       auditor: "Viện Pasteur TP. Hồ Chí Minh kiểm nghiệm",
       blockchainTx: "0x7bc2d04a621f...f772e1c (Mã xác thực số bảo an)",
-      image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=600&q=80"
+      image: "./products/farm-coconut-grove.jpg"
     },
     "SP-MHD-2026-02": {
       batchCode: "SP-MHD-2026-02",
@@ -364,7 +364,7 @@ export const coopData = {
       labTest: "Chỉ số GI: 38; Kali: 245mg/100g; Magie: 42mg/100g; Không phẩm màu",
       auditor: "Sở Khoa học & Công nghệ tỉnh Vĩnh Long",
       blockchainTx: "0x3af9e41b99a8...a120c8f (Mã xác thực số bảo an)",
-      image: "https://images.unsplash.com/photo-1587411768638-ec71f8e33b78?auto=format&fit=crop&w=600&q=80"
+      image: "./products/farm-coconut-grove.jpg"
     }
   },
 
@@ -377,7 +377,7 @@ export const coopData = {
       category: "Câu Chuyện OCOP",
       author: "Ban Truyền Thông HTX",
       excerpt: "Nhờ kiên trì mô hình kinh tế tuần hoàn và canh tác hữu cơ, lô hàng 15 tấn dầu dừa ly tâm và than gáo dừa Song Phú đã chính thức cập cảng Rotterdam (Hà Lan).",
-      image: "https://images.unsplash.com/photo-1544979590-37e9b47eb705?auto=format&fit=crop&w=800&q=80",
+      image: "./products/farm-coconut-grove.jpg",
       readTime: "4 phút đọc"
     },
     {
@@ -387,7 +387,7 @@ export const coopData = {
       category: "Cẩm Nang Sức Khỏe",
       author: "Dược sĩ Thanh Thảo",
       excerpt: "Không chỉ giúp dưỡng ẩm da mùa khô và phục hồi tóc hư tổn, dầu dừa nguyên chất còn chứa lượng lớn axit lauric hỗ trợ hệ tiêu hóa và tăng cường miễn dịch tự nhiên.",
-      image: "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?auto=format&fit=crop&w=800&q=80",
+      image: "./products/farm-coconut-grove.jpg",
       readTime: "5 phút đọc"
     },
     {
@@ -397,7 +397,7 @@ export const coopData = {
       category: "Nông Nghiệp Xanh",
       author: "KS. Nguyễn Văn Hùng",
       excerpt: "Từ gáo dừa nung thành than hoạt tính, xơ dừa làm giá thể xuất khẩu, nước dừa lên men màng sinh học, HTX Song Phú đang giải quyết bài toán môi trường và nâng cao thu nhập cho xã viên.",
-      image: "https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=800&q=80",
+      image: "./products/farm-coconut-grove.jpg",
       readTime: "6 phút đọc"
     }
   ],

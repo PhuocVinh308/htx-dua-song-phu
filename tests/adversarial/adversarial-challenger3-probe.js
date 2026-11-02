@@ -36,7 +36,15 @@ function compileTestComponents() {
     format: 'esm',
     bundle: true,
     packages: 'external',
-    loader: { '.jsx': 'jsx', '.js': 'js' },
+    loader: { 
+      '.jsx': 'jsx', 
+      '.js': 'js', 
+      '.css': 'empty', 
+      '.jpg': 'file', 
+      '.jpeg': 'file', 
+      '.png': 'file', 
+      '.svg': 'file' 
+    },
     jsx: 'automatic',
     outExtension: { '.js': '.js' },
   });

@@ -195,7 +195,7 @@ export default function CartDrawer({ isOpen, onClose, cart, onUpdateQuantity, on
                   return (
                     <div key={prodId} className="pt-4 first:pt-0 flex items-start gap-3">
                       <img
-                        src={prod.image || 'https://images.unsplash.com/photo-1544979590-37e9b47eb705?auto=format&fit=crop&w=600&q=80'}
+                        src={prod.image || './products/diamond-coconut.jpg'}
                         alt={prodName}
                         className="w-16 h-16 rounded-xl object-cover shrink-0 border border-gray-100"
                       />

@@ -24,7 +24,7 @@ export default function WhyChooseUs({ pillars }) {
         <div 
           className="relative rounded-3xl overflow-hidden py-10 px-4 sm:px-8 shadow-inner bg-cover bg-center"
           style={{
-            backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.4)), url('https://images.unsplash.com/photo-1500651230702-0e2d8a49d4ad?auto=format&fit=crop&w=1600&q=80')`,
+            backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.6)), url('./products/green-coconut.jpg')`,
           }}
         >
           <div className="relative z-10 flex flex-wrap items-center justify-center gap-6 sm:gap-8 lg:gap-10">
