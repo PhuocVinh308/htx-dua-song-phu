@@ -216,6 +216,12 @@ export const coopData = {
       price: 32000,
       originalPrice: 38000,
       image: "./products/diamond-coconut.jpg",
+      gallery: [
+        "./products/diamond-coconut.jpg",
+        "./products/diamond-coconut-open.jpg",
+        "./products/factory-processing.jpg",
+        "./products/green-coconut.jpg"
+      ],
       badge: "CAO CẤP",
       badgeColor: "bg-amber-600",
       tagline: "Tạo hình kim cương sang trọng - Tặng kèm ống hút cỏ bàng",
