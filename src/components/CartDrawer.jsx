@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { ShoppingCart, X, ArrowRight, MessageSquare, ArrowLeft, CheckCircle2, QrCode, CreditCard, Truck, ShieldCheck, Copy, Check } from 'lucide-react';
+import { ShoppingCart, X, ArrowRight, MessageSquare, ArrowLeft, CheckCircle2, QrCode, CreditCard, Truck, ShieldCheck, Copy, Check, Tag } from 'lucide-react';
 
 // High-entropy unique order ID generator
 export const generateOrderId = () => {
@@ -51,8 +51,54 @@ export default function CartDrawer({ isOpen, onClose, cart, onUpdateQuantity, on
   const [lastOrder, setLastOrder] = useState(null);
   const [copiedBank, setCopiedBank] = useState(false);
 
+  // Voucher & discount state
+  const [voucherCode, setVoucherCode] = useState('');
+  const [appliedVoucher, setAppliedVoucher] = useState(null);
+  const [voucherError, setVoucherError] = useState('');
+
+  const availableVouchers = [
+    { code: 'SOCOOP10', discountType: 'percent', value: 10, label: '-10% tổng đơn' },
+    { code: 'FREESHIP', discountType: 'fixed', value: 30000, label: 'Freeship 30k' },
+    { code: 'OCOP2026', discountType: 'fixed', value: 20000, label: 'Giảm 20k' },
+  ];
+
   const { items, totalCount, totalAmount } = calculateCartTotals(cart);
   const formattedTotal = formatVND(totalAmount);
+
+  const handleApplyVoucher = (codeToApply) => {
+    const code = (codeToApply || voucherCode).trim().toUpperCase();
+    const found = availableVouchers.find((v) => v.code === code);
+    if (!found) {
+      setVoucherError('Mã ưu đãi không hợp lệ');
+      return;
+    }
+    if (totalAmount <= 0) {
+      setVoucherError('Giỏ hàng đang trống');
+      return;
+    }
+    setVoucherError('');
+    setAppliedVoucher(found);
+    setVoucherCode(found.code);
+  };
+
+  const handleRemoveVoucher = () => {
+    setAppliedVoucher(null);
+    setVoucherCode('');
+    setVoucherError('');
+  };
+
+  let discountAmount = 0;
+  if (appliedVoucher && totalAmount > 0) {
+    if (appliedVoucher.discountType === 'percent') {
+      discountAmount = Math.round((totalAmount * appliedVoucher.value) / 100);
+    } else {
+      discountAmount = Math.min(totalAmount, appliedVoucher.value);
+    }
+  }
+
+  const finalAmount = Math.max(0, totalAmount - discountAmount);
+  const formattedFinalAmount = formatVND(finalAmount);
+  const formattedDiscountAmount = formatVND(discountAmount);
 
   const handleInputChange = (field, value) => {
     setFormData((prev) => ({ ...prev, [field]: value }));
@@ -97,7 +143,10 @@ export default function CartDrawer({ isOpen, onClose, cart, onUpdateQuantity, on
       orderId,
       customer: { ...formData },
       items: [...items],
-      totalAmount,
+      totalAmount: finalAmount,
+      subtotalAmount: totalAmount,
+      discountAmount,
+      voucherCode: appliedVoucher?.code || null,
       totalCount,
       createdAt: new Date().toLocaleString('vi-VN'),
       paymentMethod: formData.paymentMethod,
@@ -236,10 +285,84 @@ export default function CartDrawer({ isOpen, onClose, cart, onUpdateQuantity, on
             </div>
 
             {/* Cart Footer */}
-            <div className="p-4 sm:p-5 border-t border-gray-100 bg-gray-50/80 space-y-4">
-              <div className="flex items-center justify-between text-sm sm:text-base">
-                <span className="text-gray-600 font-medium">Tổng tiền tạm tính:</span>
-                <span className="text-xl font-extrabold text-emerald-900 font-heading">{formattedTotal}</span>
+            <div className="p-4 sm:p-5 border-t border-gray-100 bg-gray-50/80 space-y-3.5">
+              {/* Promo code / Voucher Section */}
+              <div className="bg-white p-3 rounded-2xl border border-gray-200/80 space-y-2">
+                <div className="flex items-center gap-2">
+                  <Tag className="w-4 h-4 text-emerald-700 shrink-0" />
+                  <input
+                    type="text"
+                    value={voucherCode}
+                    onChange={(e) => {
+                      setVoucherCode(e.target.value.toUpperCase());
+                      setVoucherError('');
+                    }}
+                    placeholder="Mã ưu đãi (VD: SOCOOP10)..."
+                    className="flex-1 text-xs px-2.5 py-1.5 rounded-lg border border-gray-200 focus:outline-none focus:border-emerald-600 font-mono uppercase"
+                  />
+                  {appliedVoucher ? (
+                    <button
+                      type="button"
+                      onClick={handleRemoveVoucher}
+                      className="px-2.5 py-1.5 rounded-lg bg-gray-100 text-gray-600 text-xs font-bold hover:bg-gray-200"
+                    >
+                      Bỏ
+                    </button>
+                  ) : (
+                    <button
+                      type="button"
+                      onClick={() => handleApplyVoucher()}
+                      className="px-3 py-1.5 rounded-lg bg-emerald-800 text-white text-xs font-bold hover:bg-emerald-900"
+                    >
+                      Áp dụng
+                    </button>
+                  )}
+                </div>
+
+                {voucherError && (
+                  <p className="text-[11px] text-red-500 font-medium">{voucherError}</p>
+                )}
+
+                {appliedVoucher && (
+                  <div className="flex items-center justify-between text-xs text-emerald-800 font-bold bg-emerald-50 px-2.5 py-1 rounded-lg border border-emerald-200">
+                    <span>Đã áp dụng mã: {appliedVoucher.code}</span>
+                    <span>-{formattedDiscountAmount}</span>
+                  </div>
+                )}
+
+                {/* Quick Voucher Chips */}
+                {!appliedVoucher && (
+                  <div className="flex flex-wrap gap-1.5 pt-0.5">
+                    {availableVouchers.map((v) => (
+                      <button
+                        key={v.code}
+                        type="button"
+                        onClick={() => handleApplyVoucher(v.code)}
+                        className="px-2 py-0.5 rounded-md text-[10px] font-bold bg-emerald-50 text-emerald-800 hover:bg-emerald-100 border border-emerald-200/70 transition"
+                      >
+                        {v.code} ({v.label})
+                      </button>
+                    ))}
+                  </div>
+                )}
+              </div>
+
+              {/* Price Breakdown */}
+              <div className="space-y-1.5 text-xs bg-white p-3 rounded-2xl border border-gray-100">
+                <div className="flex items-center justify-between text-gray-500">
+                  <span>Tạm tính ({totalCount} sản phẩm):</span>
+                  <span className="font-mono font-semibold">{formattedTotal}</span>
+                </div>
+                {appliedVoucher && (
+                  <div className="flex items-center justify-between text-emerald-700 font-bold">
+                    <span>Ưu đãi giảm giá ({appliedVoucher.code}):</span>
+                    <span className="font-mono">-{formattedDiscountAmount}</span>
+                  </div>
+                )}
+                <div className="flex items-center justify-between text-sm sm:text-base pt-2 border-t border-gray-100">
+                  <span className="text-gray-900 font-extrabold">Tổng thanh toán:</span>
+                  <span className="text-xl font-extrabold text-emerald-900 font-heading">{formattedFinalAmount}</span>
+                </div>
               </div>
 
               <p className="text-[11px] text-gray-500 italic">

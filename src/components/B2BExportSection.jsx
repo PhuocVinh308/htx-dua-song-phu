@@ -1,16 +1,47 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Check } from 'lucide-react';
+import B2BCalculator from './B2BCalculator.jsx';
 
 export default function B2BExportSection({ coopInfo }) {
+  const [formData, setFormData] = useState({
+    companyName: '',
+    phone: '',
+    email: '',
+    product: 'Dừa Xiêm gọt kim cương xuất khẩu',
+    note: '',
+  });
+
+  const handleApplyEstimate = (estimate) => {
+    setFormData((prev) => ({
+      ...prev,
+      product: estimate.productName,
+      note: estimate.note,
+    }));
+    // Smooth scroll down to form
+    const formElement = document.getElementById('b2b-form');
+    if (formElement) {
+      formElement.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     alert('Dạ HTX Dừa Song Phú đã tiếp nhận thông tin yêu cầu báo giá của Quý doanh nghiệp! Bộ phận kinh doanh B2B sẽ chủ động liên hệ gửi bảng giá chiết khấu và mẫu thử nghiệm trong thời gian sớm nhất ạ.');
-    e.target.reset();
+    setFormData({
+      companyName: '',
+      phone: '',
+      email: '',
+      product: 'Dừa Xiêm gọt kim cương xuất khẩu',
+      note: '',
+    });
   };
 
   return (
     <section className="py-16 md:py-24 bg-white relative" id="b2b-export">
       <div className="max-w-7xl mx-auto px-4 md:px-8">
+        {/* INTERACTIVE B2B CALCULATOR */}
+        <B2BCalculator onApplyToForm={handleApplyEstimate} />
+
         <div className="rounded-3xl bg-gradient-to-br from-emerald-900 to-emerald-950 text-white p-8 sm:p-12 lg:p-16 shadow-2xl overflow-hidden relative">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 relative z-10 items-center">
             <div className="lg:col-span-6 space-y-6">
@@ -47,7 +78,7 @@ export default function B2BExportSection({ coopInfo }) {
               </div>
             </div>
 
-            <div className="lg:col-span-6 bg-white text-gray-800 rounded-2xl p-6 sm:p-8 shadow-xl">
+            <div id="b2b-form" className="lg:col-span-6 bg-white text-gray-800 rounded-2xl p-6 sm:p-8 shadow-xl">
               <h3 className="text-xl font-bold font-heading text-emerald-950 mb-1">
                 Gửi Yêu Cầu Báo Giá Nhanh
               </h3>
@@ -61,6 +92,8 @@ export default function B2BExportSection({ coopInfo }) {
                   <input
                     type="text"
                     required
+                    value={formData.companyName}
+                    onChange={(e) => setFormData({ ...formData, companyName: e.target.value })}
                     placeholder="Ví dụ: Công ty TNHH Thực Phẩm Xanh"
                     className="w-full px-4 py-2.5 rounded-lg border border-gray-200 focus:outline-none focus:border-emerald-600"
                   />
@@ -72,6 +105,8 @@ export default function B2BExportSection({ coopInfo }) {
                     <input
                       type="tel"
                       required
+                      value={formData.phone}
+                      onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       placeholder="09xx xxx xxx"
                       className="w-full px-4 py-2.5 rounded-lg border border-gray-200 focus:outline-none focus:border-emerald-600"
                     />
@@ -80,6 +115,8 @@ export default function B2BExportSection({ coopInfo }) {
                     <label className="block font-bold text-gray-700 mb-1">Email Công Ty</label>
                     <input
                       type="email"
+                      value={formData.email}
+                      onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="contact@company.com"
                       className="w-full px-4 py-2.5 rounded-lg border border-gray-200 focus:outline-none focus:border-emerald-600"
                     />
@@ -88,20 +125,21 @@ export default function B2BExportSection({ coopInfo }) {
 
                 <div>
                   <label className="block font-bold text-gray-700 mb-1">Sản Phẩm Quan Tâm</label>
-                  <select className="w-full px-4 py-2.5 rounded-lg border border-gray-200 focus:outline-none focus:border-emerald-600 bg-white">
-                    <option>Dừa Xiêm gọt kim cương xuất khẩu</option>
-                    <option>Dầu dừa ly tâm nguyên chất (Can 20L / Phuy 200L)</option>
-                    <option>Mật hoa dừa cô đặc OCOP</option>
-                    <option>Dừa sáp Tam Bình đặc sản</option>
-                    <option>Than hoạt tính gáo dừa & Giá thể xơ dừa</option>
-                    <option>Hợp đồng gia công OEM / Nhãn hàng riêng</option>
-                  </select>
+                  <input
+                    type="text"
+                    value={formData.product}
+                    onChange={(e) => setFormData({ ...formData, product: e.target.value })}
+                    placeholder="Tên sản phẩm quan tâm..."
+                    className="w-full px-4 py-2.5 rounded-lg border border-gray-200 focus:outline-none focus:border-emerald-600 bg-white"
+                  />
                 </div>
 
                 <div>
                   <label className="block font-bold text-gray-700 mb-1">Ghi Chú Sản Lượng Dự Kiến</label>
                   <textarea
                     rows={3}
+                    value={formData.note}
+                    onChange={(e) => setFormData({ ...formData, note: e.target.value })}
                     placeholder="Số lượng ước tính mỗi tháng, cảng giao hàng hoặc quy cách đóng gói riêng..."
                     className="w-full px-4 py-2 rounded-lg border border-gray-200 focus:outline-none focus:border-emerald-600"
                   />

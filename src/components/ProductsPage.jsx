@@ -35,6 +35,10 @@ export default function ProductsPage({
   onQuickView,
   selectedCategory = 'all',
   onSelectCategory,
+  wishlistIds = [],
+  onToggleWishlist,
+  compareIds = [],
+  onToggleCompare,
 }) {
   const [currentPage, setCurrentPage] = useState(1);
   const [sortOption, setSortOption] = useState('default');
@@ -196,6 +200,10 @@ export default function ProductsPage({
                 key={product.id}
                 product={product}
                 onQuickView={onQuickView}
+                isLiked={wishlistIds.includes(product.id)}
+                onToggleWishlist={onToggleWishlist}
+                isCompared={compareIds.includes(product.id)}
+                onToggleCompare={onToggleCompare}
               />
             ))}
           </div>

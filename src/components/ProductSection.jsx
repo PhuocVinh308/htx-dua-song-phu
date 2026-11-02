@@ -2,7 +2,15 @@ import React from 'react';
 import ProductCard from './ProductCard.jsx';
 import { ArrowRight } from 'lucide-react';
 
-export default function ProductSection({ products, onQuickView, onExploreAll }) {
+export default function ProductSection({
+  products = [],
+  onQuickView,
+  onExploreAll,
+  wishlistIds = [],
+  onToggleWishlist,
+  compareIds = [],
+  onToggleCompare,
+}) {
   // Hiển thị 12 sản phẩm nổi bật ở trang chủ (như trong Ảnh 1)
   const featured = products.slice(0, 12);
 
@@ -31,6 +39,10 @@ export default function ProductSection({ products, onQuickView, onExploreAll }) 
               key={product.id}
               product={product}
               onQuickView={onQuickView}
+              isLiked={wishlistIds.includes(product.id)}
+              onToggleWishlist={onToggleWishlist}
+              isCompared={compareIds.includes(product.id)}
+              onToggleCompare={onToggleCompare}
             />
           ))}
         </div>

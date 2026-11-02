@@ -20,6 +20,12 @@ import CartDrawer from './components/CartDrawer.jsx';
 import ProductModal from './components/ProductModal.jsx';
 import ProductDetailPage from './components/ProductDetailPage.jsx';
 import ArticleDetailPage from './components/ArticleDetailPage.jsx';
+import SearchModal from './components/SearchModal.jsx';
+import WishlistDrawer from './components/WishlistDrawer.jsx';
+import ProductCompareModal from './components/ProductCompareModal.jsx';
+import FarmIoTStation from './components/FarmIoTStation.jsx';
+import LiveOrderToast from './components/LiveOrderToast.jsx';
+import FloatingControls from './components/FloatingControls.jsx';
 import AICoCoAssistant from './components/AICoCoAssistant.jsx';
 import Footer from './components/Footer.jsx';
 
@@ -30,6 +36,16 @@ export const parseSafeCart = (rawStored) => {
     return parsed && typeof parsed === 'object' && !Array.isArray(parsed) ? parsed : {};
   } catch {
     return {};
+  }
+};
+
+// Safely parse localStorage wishlist array
+export const parseSafeWishlist = (rawStored) => {
+  try {
+    const parsed = JSON.parse(rawStored || '[]');
+    return Array.isArray(parsed) ? parsed : [];
+  } catch {
+    return [];
   }
 };
 
@@ -70,6 +86,20 @@ export default function App() {
   const [traceBatchCode, setTraceBatchCode] = useState('SP-DXL-2026-01');
   const [toastMessage, setToastMessage] = useState(null);
 
+  // Modern state: Wishlist, Compare & Search Modal
+  const [wishlist, setWishlist] = useState(() => {
+    if (typeof localStorage !== 'undefined') {
+      return parseSafeWishlist(localStorage.getItem('socoop_wishlist'));
+    }
+    return [];
+  });
+  const [wishlistDrawerOpen, setWishlistDrawerOpen] = useState(false);
+
+  const [compareList, setCompareList] = useState([]);
+  const [compareModalOpen, setCompareModalOpen] = useState(false);
+
+  const [searchModalOpen, setSearchModalOpen] = useState(false);
+
   const handleViewDetail = (product) => {
     setSelectedDetailProduct(product);
     setActiveTab('product-detail');
@@ -88,6 +118,74 @@ export default function App() {
       localStorage.setItem('socoop_cart', JSON.stringify(cart || {}));
     }
   }, [cart]);
+
+  useEffect(() => {
+    if (typeof localStorage !== 'undefined') {
+      localStorage.setItem('socoop_wishlist', JSON.stringify(wishlist || []));
+    }
+  }, [wishlist]);
+
+  // Global hotkey: Cmd + K / Ctrl + K opens Spotlight search
+  useEffect(() => {
+    const handleGlobalKeyDown = (e) => {
+      if ((e.metaKey || e.ctrlKey) && e.key === 'k') {
+        e.preventDefault();
+        setSearchModalOpen((prev) => !prev);
+      }
+    };
+    window.addEventListener('keydown', handleGlobalKeyDown);
+    return () => window.removeEventListener('keydown', handleGlobalKeyDown);
+  }, []);
+
+  const handleToggleWishlist = (product) => {
+    if (!product || !product.id) return;
+    setWishlist((prev) => {
+      const exists = prev.some((p) => p.id === product.id);
+      if (exists) {
+        showToast(`Đã bỏ "${product.name}" khỏi danh sách yêu thích`);
+        return prev.filter((p) => p.id !== product.id);
+      } else {
+        showToast(`Đã thêm "${product.name}" vào danh sách yêu thích ❤️`);
+        return [...prev, product];
+      }
+    });
+  };
+
+  const handleRemoveFromWishlist = (productId) => {
+    setWishlist((prev) => prev.filter((p) => p.id !== productId));
+    showToast('Đã xóa khỏi danh sách yêu thích');
+  };
+
+  const handleClearWishlist = () => {
+    setWishlist([]);
+    showToast('Đã làm trống danh sách yêu thích');
+  };
+
+  const handleToggleCompare = (product) => {
+    if (!product || !product.id) return;
+    setCompareList((prev) => {
+      const exists = prev.some((p) => p.id === product.id);
+      if (exists) {
+        showToast(`Đã bỏ "${product.name}" khỏi bảng so sánh`);
+        return prev.filter((p) => p.id !== product.id);
+      }
+      if (prev.length >= 4) {
+        showToast('Chỉ có thể so sánh tối đa 4 sản phẩm cùng lúc');
+        return prev;
+      }
+      showToast(`Đã thêm "${product.name}" vào bảng so sánh ⚖️`);
+      return [...prev, product];
+    });
+  };
+
+  const handleRemoveFromCompare = (productId) => {
+    setCompareList((prev) => prev.filter((p) => p.id !== productId));
+  };
+
+  const handleClearCompare = () => {
+    setCompareList([]);
+    showToast('Đã làm mới bảng so sánh');
+  };
 
   // Support URL hash navigation fallback
   useEffect(() => {
@@ -172,12 +270,10 @@ export default function App() {
       <Navbar
         coopInfo={coopData.coopInfo}
         cartCount={cartTotalCount}
+        wishlistCount={wishlist.length}
         onOpenCart={() => setCartDrawerOpen(true)}
-        onOpenSearch={() => {
-          setSelectedCategory('all');
-          setActiveTab('products');
-          window.scrollTo({ top: 0, behavior: 'smooth' });
-        }}
+        onOpenWishlist={() => setWishlistDrawerOpen(true)}
+        onOpenSearch={() => setSearchModalOpen(true)}
         activeTab={activeTab}
         setActiveTab={setActiveTab}
         onSelectCategory={(cat) => setSelectedCategory(cat)}
@@ -209,10 +305,17 @@ export default function App() {
             {/* Tại sao chọn chúng tôi: 4 vòng tròn ảnh & Logo tròn ở giữa chuẩn Ảnh 1 */}
             <WhyChooseUs pillars={coopData.whyChooseUsPillars} />
 
+            {/* Trạm Quan Trắc Vi Khí Hậu & Nông Nghiệp Thông Minh IoT Song Phú */}
+            <FarmIoTStation />
+
             {/* Sản phẩm nổi bật: 12 sản phẩm dạng thẻ nền trắng có nút > XEM CHI TIẾT */}
             <ProductSection
               products={coopData.products}
               onQuickView={handleViewDetail}
+              wishlistIds={wishlist.map((p) => p.id)}
+              onToggleWishlist={handleToggleWishlist}
+              compareIds={compareList.map((p) => p.id)}
+              onToggleCompare={handleToggleCompare}
               onExploreAll={() => {
                 setSelectedCategory('all');
                 setActiveTab('products');
@@ -305,6 +408,10 @@ export default function App() {
             onQuickView={handleViewDetail}
             selectedCategory={selectedCategory}
             onSelectCategory={(cat) => setSelectedCategory(cat)}
+            wishlistIds={wishlist.map((p) => p.id)}
+            onToggleWishlist={handleToggleWishlist}
+            compareIds={compareList.map((p) => p.id)}
+            onToggleCompare={handleToggleCompare}
           />
         )}
 
@@ -381,6 +488,54 @@ export default function App() {
         products={coopData.products}
         onAddToCart={addToCart}
         onQuickView={handleViewDetail}
+      />
+
+      {/* Spotlight Search Modal (Cmd + K) */}
+      <SearchModal
+        isOpen={searchModalOpen}
+        onClose={() => setSearchModalOpen(false)}
+        products={coopData.products}
+        collections={coopData.collections}
+        certifications={coopData.certifications}
+        traceabilityBatches={coopData.traceabilityBatches}
+        onSelectProduct={(p) => handleViewDetail(p)}
+        onSelectArticle={(a) => handleViewArticle(a)}
+        onSelectBatch={(code) => handleTraceClick(code)}
+      />
+
+      {/* Wishlist Drawer (Danh Sách Yêu Thích) */}
+      <WishlistDrawer
+        isOpen={wishlistDrawerOpen}
+        onClose={() => setWishlistDrawerOpen(false)}
+        wishlist={wishlist}
+        onRemoveFromWishlist={handleRemoveFromWishlist}
+        onAddToCart={addToCart}
+        onClearWishlist={handleClearWishlist}
+        onExploreProducts={() => {
+          setSelectedCategory('all');
+          setActiveTab('products');
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }}
+        onQuickView={handleViewDetail}
+      />
+
+      {/* Product Compare Modal (So Sánh Sản Phẩm) */}
+      <ProductCompareModal
+        isOpen={compareModalOpen}
+        onClose={() => setCompareModalOpen(false)}
+        compareList={compareList}
+        onRemoveFromCompare={handleRemoveFromCompare}
+        onAddToCart={addToCart}
+        onClearCompare={handleClearCompare}
+      />
+
+      {/* Live Social Proof Order Notification */}
+      <LiveOrderToast />
+
+      {/* Floating Controls: Scroll To Top với vòng tròn tiến độ & Nút Quick Compare */}
+      <FloatingControls
+        compareCount={compareList.length}
+        onOpenCompare={() => setCompareModalOpen(true)}
       />
     </div>
   );

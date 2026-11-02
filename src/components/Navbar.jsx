@@ -1,10 +1,12 @@
 import React, { useState } from 'react';
-import { Clock, Phone, ShoppingCart, Search, Menu, X, Facebook, Youtube } from 'lucide-react';
+import { Clock, Phone, ShoppingCart, Heart, Search, Menu, X, Facebook, Youtube } from 'lucide-react';
 
 export default function Navbar({
   coopInfo,
   cartCount,
+  wishlistCount = 0,
   onOpenCart,
+  onOpenWishlist,
   onOpenSearch,
   activeTab,
   setActiveTab,
@@ -127,6 +129,20 @@ export default function Navbar({
             </a>
           </div>
 
+          {/* Nút Danh sách Yêu thích */}
+          <button
+            onClick={onOpenWishlist}
+            className="relative p-2 rounded-full hover:bg-gray-100 text-[#0f4c3a] transition"
+            title="Sản phẩm yêu thích"
+          >
+            <Heart className="w-5 h-5 text-gray-700 hover:text-rose-500 transition" />
+            {wishlistCount > 0 && (
+              <span className="absolute -top-0.5 -right-0.5 w-4 h-4 rounded-full bg-rose-500 text-white text-[10px] font-bold flex items-center justify-center animate-pulse">
+                {wishlistCount}
+              </span>
+            )}
+          </button>
+
           {/* Mini cart icon với badge đỏ như trong ảnh */}
           <button onClick={onOpenCart} className="relative p-2 rounded-full hover:bg-gray-100 text-[#0f4c3a] transition" title="Giỏ hàng">
             <ShoppingCart className="w-5 h-5" />
@@ -198,8 +214,16 @@ export default function Navbar({
             })}
           </nav>
 
-          <button onClick={onOpenSearch} className="p-2 text-white/80 hover:text-white transition ml-auto lg:ml-0" title="Tìm kiếm">
-            <Search className="w-4 h-4" />
+          <button
+            onClick={onOpenSearch}
+            className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white/10 hover:bg-white/20 text-white/90 hover:text-white transition text-xs font-semibold ml-auto lg:ml-0"
+            title="Tìm kiếm nhanh (Cmd + K)"
+          >
+            <Search className="w-3.5 h-3.5 text-amber-300" />
+            <span className="hidden xl:inline text-[11px]">Tìm kiếm...</span>
+            <span className="hidden sm:inline-block px-1.5 py-0.5 rounded text-[10px] bg-black/20 text-white/70 font-mono">
+              ⌘K
+            </span>
           </button>
         </div>
       </div>

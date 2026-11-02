@@ -1,14 +1,63 @@
 import React from 'react';
-import { ChevronRight } from 'lucide-react';
+import { Heart, Scale } from 'lucide-react';
 
-export default function ProductCard({ product, onQuickView }) {
+export default function ProductCard({
+  product,
+  onQuickView,
+  isLiked = false,
+  onToggleWishlist,
+  isCompared = false,
+  onToggleCompare,
+}) {
   return (
     <article 
       onClick={() => onQuickView && onQuickView(product)}
-      className="tb-product-card p-3 sm:p-4 flex flex-col justify-between items-center text-center cursor-pointer group"
+      className="tb-product-card p-3 sm:p-4 flex flex-col justify-between items-center text-center cursor-pointer group relative"
     >
+      {/* Floating Action Icons */}
+      <div className="absolute top-2 right-2 z-10 flex flex-col gap-1.5 opacity-90 group-hover:opacity-100 transition-opacity">
+        {onToggleWishlist && (
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              onToggleWishlist(product);
+            }}
+            className={`w-7 h-7 rounded-full bg-white/95 shadow-sm border border-gray-100 flex items-center justify-center transition-transform hover:scale-110 ${
+              isLiked ? 'text-rose-500 fill-rose-500' : 'text-gray-400 hover:text-rose-500'
+            }`}
+            title={isLiked ? 'Bỏ thích' : 'Thêm vào yêu thích'}
+          >
+            <Heart className={`w-3.5 h-3.5 ${isLiked ? 'fill-current' : ''}`} />
+          </button>
+        )}
+
+        {onToggleCompare && (
+          <button
+            type="button"
+            onClick={(e) => {
+              e.stopPropagation();
+              onToggleCompare(product);
+            }}
+            className={`w-7 h-7 rounded-full bg-white/95 shadow-sm border border-gray-100 flex items-center justify-center transition-transform hover:scale-110 ${
+              isCompared ? 'bg-emerald-600 text-white border-emerald-600' : 'text-gray-400 hover:text-emerald-700'
+            }`}
+            title={isCompared ? 'Bỏ so sánh' : 'Thêm vào so sánh'}
+          >
+            <Scale className="w-3.5 h-3.5" />
+          </button>
+        )}
+      </div>
+
+      {/* Badge OCOP/Top sell if present */}
+      {product.badge && (
+        <span className="absolute top-2 left-2 z-10 px-2 py-0.5 rounded-full text-[9px] font-bold uppercase tracking-wider bg-amber-500/90 text-white shadow-xs pointer-events-none">
+          {product.badge}
+        </span>
+      )}
+
       {/* Ảnh sản phẩm (tương tự Ảnh 1 & Ảnh 3) */}
-      <div className="w-full aspect-square rounded-lg overflow-hidden bg-gray-50 flex items-center justify-center p-2 mb-3">
+      <div className="w-full aspect-square rounded-lg overflow-hidden bg-gray-50 flex items-center justify-center p-2 mb-2">
         <img
           src={product.image}
           alt={product.name}
@@ -18,9 +67,16 @@ export default function ProductCard({ product, onQuickView }) {
       </div>
 
       {/* Tên sản phẩm in hoa đậm font Barlow chuẩn mẫu Thanh Bình */}
-      <h3 className="text-xs sm:text-[13px] font-bold text-gray-800 uppercase tracking-tight group-hover:text-[#3b7e28] transition line-clamp-2 min-h-[36px] flex items-center justify-center mb-3">
+      <h3 className="text-xs sm:text-[13px] font-bold text-gray-800 uppercase tracking-tight group-hover:text-[#3b7e28] transition line-clamp-2 min-h-[36px] flex items-center justify-center mb-1">
         {product.name}
       </h3>
+
+      {/* Giá tiền niêm yết chuẩn e-commerce */}
+      {product.price && (
+        <p className="text-xs font-extrabold text-emerald-800 mb-2 font-mono">
+          {product.price?.toLocaleString('vi-VN')} ₫
+        </p>
+      )}
 
       {/* Nút Xem chi tiết màu xanh lá dạng pill chuẩn 100% như trong ảnh */}
       <button
