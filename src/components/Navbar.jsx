@@ -8,6 +8,7 @@ export default function Navbar({
   onOpenCart,
   onOpenWishlist,
   onOpenSearch,
+  onOpenPromo,
   activeTab,
   setActiveTab,
   onSelectCategory,
@@ -59,6 +60,16 @@ export default function Navbar({
             <span className="truncate">{coopInfo.address}</span>
           </div>
           <div className="hidden sm:flex items-center gap-3 text-gray-500 shrink-0">
+            {onOpenPromo && (
+              <button 
+                type="button"
+                onClick={onOpenPromo}
+                className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-amber-100 text-amber-900 font-bold hover:bg-amber-200 transition text-[10px] shadow-2xs"
+                title="Xem chương trình khuyến mãi & ưu đãi đặc biệt"
+              >
+                <span>🎁 Ưu đãi 10%</span>
+              </button>
+            )}
             <button onClick={() => handleNavClick('contact')} className="hover:text-[#2e6b27] transition">Liên hệ</button>
             <span>|</span>
             <button onClick={() => handleNavClick('about')} className="hover:text-[#2e6b27] transition">Giới thiệu</button>

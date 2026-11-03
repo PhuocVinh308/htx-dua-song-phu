@@ -23,6 +23,7 @@ import ArticleDetailPage from './components/ArticleDetailPage.jsx';
 import SearchModal from './components/SearchModal.jsx';
 import WishlistDrawer from './components/WishlistDrawer.jsx';
 import ProductCompareModal from './components/ProductCompareModal.jsx';
+import PromoModal from './components/PromoModal.jsx';
 import FloatingControls from './components/FloatingControls.jsx';
 import AICoCoAssistant from './components/AICoCoAssistant.jsx';
 import Footer from './components/Footer.jsx';
@@ -135,6 +136,22 @@ export default function App() {
     };
     window.addEventListener('keydown', handleGlobalKeyDown);
     return () => window.removeEventListener('keydown', handleGlobalKeyDown);
+  }, []);
+
+  // Popup quảng cáo & khuyến mãi mùa vụ: tự động bật sau 2.5s nếu chưa tắt trong ngày
+  const [promoModalOpen, setPromoModalOpen] = useState(false);
+  useEffect(() => {
+    if (typeof localStorage !== 'undefined') {
+      const dismissedUntil = localStorage.getItem('socoop_promo_dismissed_until');
+      if (dismissedUntil && Number(dismissedUntil) > Date.now()) {
+        return;
+      }
+    }
+    const timer = setTimeout(() => {
+      setPromoModalOpen(true);
+    }, 2500);
+
+    return () => clearTimeout(timer);
   }, []);
 
   const handleToggleWishlist = (product) => {
@@ -274,6 +291,7 @@ export default function App() {
         onOpenCart={() => setCartDrawerOpen(true)}
         onOpenWishlist={() => setWishlistDrawerOpen(true)}
         onOpenSearch={() => setSearchModalOpen(true)}
+        onOpenPromo={() => setPromoModalOpen(true)}
         activeTab={activeTab}
         setActiveTab={setActiveTab}
         onSelectCategory={(cat) => setSelectedCategory(cat)}
@@ -528,6 +546,20 @@ export default function App() {
         onClearCompare={handleClearCompare}
       />
 
+
+      {/* Popup Quảng Cáo & Khuyến Mãi Mùa Vụ OCOP */}
+      <PromoModal
+        isOpen={promoModalOpen}
+        onClose={() => setPromoModalOpen(false)}
+        onApplyVoucher={(code) => {
+          showToast(`Đã nhận mã ưu đãi ${code}! Giảm 10% đơn hàng`);
+        }}
+        onExploreProducts={() => {
+          setSelectedCategory('all');
+          setActiveTab('products');
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        }}
+      />
 
       {/* Floating Controls: Scroll To Top với vòng tròn tiến độ & Nút Quick Compare */}
       <FloatingControls
