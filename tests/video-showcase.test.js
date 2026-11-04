@@ -69,4 +69,15 @@ test('AI Video Showcase Suite', async (t) => {
     assert.ok(html.includes('XEM VIDEO'), 'AboutPage must have bold Play Video button');
     assert.ok(html.includes('Hành trình Nông sản Xanh Song Phú'), 'AboutPage must display showcase subtitle');
   });
+
+  await t.test('6. VideoShowcaseSection renders embedded video player directly on home page', async () => {
+    const VideoShowcaseSection = await loadComponent('components/VideoShowcaseSection.jsx');
+    const html = renderToHtml(VideoShowcaseSection, {});
+
+    assert.ok(html.includes('<video'), 'Must contain embedded <video> element');
+    assert.ok(html.includes('htx-dua-song-phu-intro.mp4'), 'Must link to video mp4 file');
+    assert.ok(html.includes('Thước Phim HTX Dừa Song Phú'), 'Must display Section Title');
+    assert.ok(html.includes('Bấm Để Xem Phim'), 'Must display prominent Play prompt');
+    assert.ok(html.includes('Mở video trong tab mới'), 'Must provide direct download / tab link');
+  });
 });

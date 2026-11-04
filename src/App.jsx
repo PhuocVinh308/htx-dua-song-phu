@@ -7,6 +7,7 @@ import WhyChooseUs from './components/WhyChooseUs.jsx';
 import ProductSection from './components/ProductSection.jsx';
 import ProductionGallery from './components/ProductionGallery.jsx';
 import NewsSection from './components/NewsSection.jsx';
+import VideoShowcaseSection from './components/VideoShowcaseSection.jsx';
 
 import AboutPage from './components/AboutPage.jsx';
 import ProductsPage from './components/ProductsPage.jsx';
@@ -324,6 +325,9 @@ export default function App() {
               }}
               onWatchVideo={() => setVideoModalOpen(true)}
             />
+
+            {/* Khối Thước Phim Video Giới Thiệu Trực Tiếp Trên Trang Chủ */}
+            <VideoShowcaseSection />
 
             {/* Tại sao chọn chúng tôi: 4 vòng tròn ảnh & Logo tròn ở giữa chuẩn Ảnh 1 */}
             <WhyChooseUs pillars={coopData.whyChooseUsPillars} />
