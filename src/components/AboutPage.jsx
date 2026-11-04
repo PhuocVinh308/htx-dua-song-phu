@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function AboutPage({ coopInfo }) {
+export default function AboutPage({ coopInfo, onWatchVideo }) {
   return (
     <div className="bg-white min-h-screen py-10 font-sans">
       <div className="max-w-5xl mx-auto px-4">
@@ -35,6 +35,48 @@ export default function AboutPage({ coopInfo }) {
             <li>Đại diện kinh doanh của Song Phu Coop tham gia các hoạt động gặp gỡ khách hàng, cập nhật nhu cầu và ký kết hợp đồng cung ứng nông sản ổn định lâu dài.</li>
             <li>Chúng tôi đang tìm kiếm các nhà nhập khẩu, phân phối trên toàn thế giới, đặc biệt là thị trường Châu Á, Châu Âu và Bắc Mỹ.</li>
           </ul>
+        </div>
+
+        {/* Khối Video Showcase Giới Thiệu HTX OCOP 4 Sao */}
+        <div className="mt-10 max-w-4xl mx-auto">
+          <div className="relative rounded-2xl overflow-hidden shadow-2xl border-2 border-emerald-600/30 group">
+            <img
+              src="./videos/video-poster.jpg"
+              alt="Video Giới thiệu HTX Dừa Song Phú"
+              className="w-full h-64 sm:h-80 md:h-96 object-cover filter brightness-90 group-hover:scale-105 transition-transform duration-700"
+            />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent flex flex-col justify-between p-6 sm:p-8">
+              <div className="flex items-center justify-between">
+                <span className="px-3 py-1 rounded-full text-xs font-bold bg-[#4fa32d] text-white shadow-md flex items-center gap-1.5">
+                  ★ THƯỚC PHIM GIỚI THIỆU HTX
+                </span>
+                <span className="text-xs font-semibold text-white/90 bg-black/50 backdrop-blur-sm px-3 py-1 rounded-full border border-white/20">
+                  Thời lượng: 0:28 • 720p HD
+                </span>
+              </div>
+
+              <div className="text-center sm:text-left flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div>
+                  <h3 className="text-lg sm:text-2xl font-black text-white drop-shadow uppercase tracking-wide">
+                    Hành trình Nông sản Xanh Song Phú
+                  </h3>
+                  <p className="text-xs sm:text-sm text-gray-200 mt-1 max-w-xl">
+                    Từ rạch phù sa sông Măng Thít đến các sản phẩm dừa xiêm, dầu dừa ly tâm và mật hoa dừa đạt chuẩn OCOP 4 sao tỉnh Vĩnh Long.
+                  </p>
+                </div>
+                <button
+                  onClick={onWatchVideo}
+                  className="flex-shrink-0 inline-flex items-center gap-3 px-6 py-3 rounded-full bg-[#4fa32d] hover:bg-[#3d8323] text-white font-bold text-sm shadow-xl transform hover:scale-105 transition-all group"
+                  title="Nhấn để phát video"
+                >
+                  <span className="w-8 h-8 rounded-full bg-white text-[#4fa32d] flex items-center justify-center font-black shadow-inner">
+                    ▶
+                  </span>
+                  <span>XEM VIDEO</span>
+                </button>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* 2 Khối Giới Thiệu & Giấy Chứng Nhận Đăng Ký Quyền Tác Giả / Nhãn Hiệu (Chuẩn Ảnh 2) */}

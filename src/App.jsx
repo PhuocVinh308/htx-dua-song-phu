@@ -24,6 +24,7 @@ import SearchModal from './components/SearchModal.jsx';
 import WishlistDrawer from './components/WishlistDrawer.jsx';
 import ProductCompareModal from './components/ProductCompareModal.jsx';
 import PromoModal from './components/PromoModal.jsx';
+import VideoModal from './components/VideoModal.jsx';
 import FloatingControls from './components/FloatingControls.jsx';
 import AICoCoAssistant from './components/AICoCoAssistant.jsx';
 import Footer from './components/Footer.jsx';
@@ -140,6 +141,8 @@ export default function App() {
 
   // Popup quảng cáo & khuyến mãi mùa vụ: tự động bật sau 2.5s nếu chưa tắt trong ngày
   const [promoModalOpen, setPromoModalOpen] = useState(false);
+  // Modal trình chiếu video giới thiệu HTX (AI Showcase)
+  const [videoModalOpen, setVideoModalOpen] = useState(false);
   useEffect(() => {
     if (typeof localStorage !== 'undefined') {
       const dismissedUntil = localStorage.getItem('socoop_promo_dismissed_until');
@@ -309,6 +312,7 @@ export default function App() {
                 setActiveTab('about');
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
+              onWatchVideo={() => setVideoModalOpen(true)}
             />
 
             {/* Giới thiệu Hợp tác xã Song Phú với ảnh nải quả dán tem tròn */}
@@ -318,6 +322,7 @@ export default function App() {
                 setActiveTab('about');
                 window.scrollTo({ top: 0, behavior: 'smooth' });
               }}
+              onWatchVideo={() => setVideoModalOpen(true)}
             />
 
             {/* Tại sao chọn chúng tôi: 4 vòng tròn ảnh & Logo tròn ở giữa chuẩn Ảnh 1 */}
@@ -415,7 +420,10 @@ export default function App() {
 
         {/* TAB 2: GIỚI THIỆU CHUẨN XÁC 100% NHƯ ẢNH 2 */}
         {activeTab === 'about' && (
-          <AboutPage coopInfo={coopData.coopInfo} />
+          <AboutPage
+            coopInfo={coopData.coopInfo}
+            onWatchVideo={() => setVideoModalOpen(true)}
+          />
         )}
 
         {/* TAB 3: SẢN PHẨM CHUẨN XÁC 100% NHƯ ẢNH 3 */}
@@ -559,6 +567,12 @@ export default function App() {
           setActiveTab('products');
           window.scrollTo({ top: 0, behavior: 'smooth' });
         }}
+      />
+
+      {/* Modal Trình Chiếu Video Giới Thiệu HTX Chuẩn AI Showcase */}
+      <VideoModal
+        isOpen={videoModalOpen}
+        onClose={() => setVideoModalOpen(false)}
       />
 
       {/* Floating Controls: Scroll To Top với vòng tròn tiến độ & Nút Quick Compare */}

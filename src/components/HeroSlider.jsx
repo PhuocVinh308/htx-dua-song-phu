@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 
-export default function HeroSlider({ banner, onExploreClick }) {
+export default function HeroSlider({ banner, onExploreClick, onWatchVideo }) {
   return (
     <section className="relative overflow-hidden bg-[#0f4c3a] text-white" id="home">
       {/* Background Image: Vườn dừa với con đường ở giữa như trong Ảnh 1 */}
@@ -25,13 +25,23 @@ export default function HeroSlider({ banner, onExploreClick }) {
           <p className="text-xs sm:text-sm text-gray-200 mb-6 leading-relaxed max-w-md mx-auto">
             {banner.desc}
           </p>
-          <div>
+          <div className="flex flex-wrap items-center justify-center gap-3">
             <button
               onClick={onExploreClick}
-              className="inline-flex items-center gap-2 btn-pill-green px-6 py-2.5 text-xs sm:text-sm shadow-md"
+              className="inline-flex items-center gap-2 btn-pill-green px-5 sm:px-6 py-2.5 text-xs sm:text-sm shadow-md"
             >
               <span>{banner.btnText}</span>
               <ArrowRight className="w-3.5 h-3.5" />
+            </button>
+            <button
+              onClick={onWatchVideo}
+              className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-white/15 hover:bg-white/25 text-white border border-white/30 backdrop-blur-sm transition-all shadow-md group"
+              title="Xem video giới thiệu Hợp tác xã Dừa Song Phú"
+            >
+              <span className="w-5 h-5 rounded-full bg-emerald-500 text-white flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
+                ▶
+              </span>
+              <span>Xem Video Giới Thiệu</span>
             </button>
           </div>
         </div>

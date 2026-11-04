@@ -1,7 +1,7 @@
 import React from 'react';
 import { ArrowRight } from 'lucide-react';
 
-export default function AboutSection({ coopInfo, onMoreClick }) {
+export default function AboutSection({ coopInfo, onMoreClick, onWatchVideo }) {
   return (
     <section className="py-14 sm:py-20 bg-[#fbfbfb] relative overflow-hidden" id="about">
       {/* Nền hoa văn mờ phác họa làng quê nông trại như trong Ảnh 1 */}
@@ -54,13 +54,23 @@ export default function AboutSection({ coopInfo, onMoreClick }) {
               </p>
             </div>
 
-            <div className="pt-2">
+            <div className="pt-2 flex flex-wrap items-center gap-3">
               <button
                 onClick={onMoreClick}
                 className="inline-flex items-center gap-2 btn-pill-green px-5 py-2 text-xs shadow-sm"
               >
                 <span>Xem thêm</span>
                 <ArrowRight className="w-3.5 h-3.5" />
+              </button>
+              <button
+                onClick={onWatchVideo}
+                className="inline-flex items-center gap-2 px-4 py-2 rounded-full text-xs font-bold text-[#0f4c3a] bg-emerald-50 hover:bg-emerald-100 border border-emerald-300 transition-all shadow-sm group"
+                title="Xem thước phim giới thiệu HTX"
+              >
+                <span className="w-4 h-4 rounded-full bg-[#4fa32d] text-white flex items-center justify-center text-[9px] group-hover:scale-110 transition-transform">
+                  ▶
+                </span>
+                <span>Thước phim HTX</span>
               </button>
             </div>
           </div>
