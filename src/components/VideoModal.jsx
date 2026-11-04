@@ -2,13 +2,48 @@ import React, { useRef, useState, useEffect } from 'react';
 import { X, Play, Pause, Volume2, VolumeX, Maximize, RotateCcw, Sparkles } from 'lucide-react';
 
 const SCENE_CAPTIONS = [
-  { start: 0, end: 4.0, title: 'Vùng nguyên liệu hữu cơ', desc: 'Rạch phù sa ven sông Măng Thít, Tam Bình, Vĩnh Long' },
-  { start: 4.0, end: 8.0, title: 'Thu hoạch dừa bánh tẻ', desc: 'Xã viên tuyển chọn từng buồng dừa trĩu quả an toàn' },
-  { start: 8.0, end: 12.0, title: 'Xưởng sơ chế chuẩn OCOP', desc: 'Gọt tỉa dừa xiêm kim cương sạch khuẩn' },
-  { start: 12.0, end: 16.0, title: 'Ép ly tâm lạnh 3 pha', desc: 'Chiết xuất dầu dừa nguyên chất tinh khiết không gia nhiệt' },
-  { start: 16.0, end: 20.0, title: 'Thu mật hoa dừa tự nhiên', desc: 'Nghệ nhân mát-xa búp hoa thu từng giọt mật thơm lành' },
-  { start: 20.0, end: 24.0, title: 'Kinh tế tuần hoàn xơ dừa', desc: 'Tận dụng 100% phụ phẩm làm xơ dừa sinh thái xuất khẩu' },
-  { start: 24.0, end: 29.0, title: 'Văn bằng chứng nhận OCOP 4 sao', desc: 'Khẳng định uy tín và chất lượng nông sản Song Phú' },
+  {
+    start: 0,
+    end: 7.3,
+    title: '1. Vùng nguyên liệu hữu cơ',
+    desc: 'Chào mừng quý khách đến với Hợp tác xã Dừa Song Phú, bên dòng sông Măng Thít trù phú tỉnh Vĩnh Long.',
+  },
+  {
+    start: 7.3,
+    end: 14.7,
+    title: '2. Thu hoạch dừa bánh tẻ',
+    desc: 'Bà con nông dân chuyên canh những vườn dừa hữu cơ, tuyển chọn từng quả dừa bánh tẻ tươi ngon và giàu dinh dưỡng.',
+  },
+  {
+    start: 14.7,
+    end: 21.9,
+    title: '3. Xưởng sơ chế chuẩn OCOP',
+    desc: 'Dừa tươi được sơ chế và gọt tạo hình kim cương xuất khẩu, đạt nghiêm ngặt các tiêu chuẩn an toàn thực phẩm.',
+  },
+  {
+    start: 21.9,
+    end: 28.8,
+    title: '4. Ép ly tâm lạnh 3 pha',
+    desc: 'Dây chuyền ép ly tâm lạnh ba pha hiện đại, giúp giữ trọn vẹn dưỡng chất tinh khiết của dầu dừa nguyên chất.',
+  },
+  {
+    start: 28.8,
+    end: 36.1,
+    title: '5. Thu mật hoa dừa tự nhiên',
+    desc: 'Những giọt mật hoa dừa tự nhiên được thu hái công phu lúc rạng đông, mang đến vị ngọt thanh lành cho sức khỏe.',
+  },
+  {
+    start: 36.1,
+    end: 43.8,
+    title: '6. Kinh tế tuần hoàn xơ dừa',
+    desc: 'Mô hình kinh tế tuần hoàn không phế thải, tận dụng xơ dừa sinh thái để phục vụ nông nghiệp và xuất khẩu quốc tế.',
+  },
+  {
+    start: 43.8,
+    end: 53.0,
+    title: '7. Chứng nhận OCOP 4 sao',
+    desc: 'Hợp tác xã Dừa Song Phú tự hào đạt chứng nhận OCOP bốn sao, khẳng định uy tín và chất lượng nông sản Việt Nam.',
+  },
 ];
 
 export default function VideoModal({ isOpen, onClose }) {
@@ -16,7 +51,7 @@ export default function VideoModal({ isOpen, onClose }) {
   const [isPlaying, setIsPlaying] = useState(false);
   const [isMuted, setIsMuted] = useState(false);
   const [currentTime, setCurrentTime] = useState(0);
-  const [duration, setDuration] = useState(28.5);
+  const [duration, setDuration] = useState(52.4);
   const [activeCaption, setActiveCaption] = useState(SCENE_CAPTIONS[0]);
 
   useEffect(() => {
@@ -130,7 +165,7 @@ export default function VideoModal({ isOpen, onClose }) {
           <div className="flex items-center gap-2.5">
             <span className="flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-[#4fa32d] text-white shadow-sm">
               <Sparkles className="w-3 h-3" />
-              VIDEO AI SHOWCASE
+              VIDEO AI • LỒNG TIẾNG THUYẾT MINH
             </span>
             <h3 className="text-sm sm:text-base font-bold text-white tracking-wide">
               Thước phim giới thiệu HTX Dừa Song Phú (OCOP 4 Sao)
@@ -241,7 +276,7 @@ export default function VideoModal({ isOpen, onClose }) {
 
               <div className="flex items-center gap-2">
                 <span className="hidden sm:inline text-[11px] text-emerald-300 bg-emerald-950/60 border border-emerald-800/50 px-2 py-0.5 rounded">
-                  720p HD • Âm thanh Nam Bộ
+                  720p HD • Lồng tiếng AI & Nhạc Nam Bộ
                 </span>
                 <button
                   onClick={handleFullscreen}

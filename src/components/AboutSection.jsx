@@ -70,7 +70,7 @@ export default function AboutSection({ coopInfo, onMoreClick, onWatchVideo }) {
                 <span className="w-4 h-4 rounded-full bg-[#4fa32d] text-white flex items-center justify-center text-[9px] group-hover:scale-110 transition-transform">
                   ▶
                 </span>
-                <span>Thước phim HTX</span>
+                <span>Thước phim HTX (Lồng tiếng AI)</span>
               </button>
             </div>
           </div>

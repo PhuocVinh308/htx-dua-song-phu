@@ -36,12 +36,12 @@ export default function HeroSlider({ banner, onExploreClick, onWatchVideo }) {
             <button
               onClick={onWatchVideo}
               className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-bold bg-white/15 hover:bg-white/25 text-white border border-white/30 backdrop-blur-sm transition-all shadow-md group"
-              title="Xem video giới thiệu Hợp tác xã Dừa Song Phú"
+              title="Xem video giới thiệu Hợp tác xã Dừa Song Phú (Có lồng tiếng thuyết minh AI)"
             >
               <span className="w-5 h-5 rounded-full bg-emerald-500 text-white flex items-center justify-center group-hover:scale-110 transition-transform shadow-sm">
                 ▶
               </span>
-              <span>Xem Video Giới Thiệu</span>
+              <span>Xem Video Giới Thiệu (Lồng Tiếng AI)</span>
             </button>
           </div>
         </div>

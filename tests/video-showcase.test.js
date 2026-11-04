@@ -13,9 +13,9 @@ test('AI Video Showcase Suite', async (t) => {
     assert.ok(html.includes('<video'), 'Must contain <video> element');
     assert.ok(html.includes('./videos/htx-dua-song-phu-intro.mp4'), 'Must point to the AI rendered mp4 file');
     assert.ok(html.includes('./videos/video-poster.jpg'), 'Must have high quality video poster');
-    assert.ok(html.includes('VIDEO AI SHOWCASE') || html.includes('Thước phim giới thiệu'), 'Must display video showcase title');
+    assert.ok(html.includes('LỒNG TIẾNG THUYẾT MINH') || html.includes('VIDEO AI'), 'Must display video showcase voiceover badge');
     assert.ok(html.includes('Vùng nguyên liệu hữu cơ'), 'Must display scene 1 caption');
-    assert.ok(html.includes('Văn bằng chứng nhận OCOP 4 sao'), 'Must display scene 7 caption');
+    assert.ok(html.includes('Chứng nhận OCOP 4 sao') || html.includes('OCOP bốn sao'), 'Must display scene 7 caption');
   });
 
   await t.test('2. VideoModal renders nothing when isOpen is false', async () => {

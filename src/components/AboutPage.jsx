@@ -51,7 +51,7 @@ export default function AboutPage({ coopInfo, onWatchVideo }) {
                   ★ THƯỚC PHIM GIỚI THIỆU HTX
                 </span>
                 <span className="text-xs font-semibold text-white/90 bg-black/50 backdrop-blur-sm px-3 py-1 rounded-full border border-white/20">
-                  Thời lượng: 0:28 • 720p HD
+                  Thời lượng: 0:52 • Lồng tiếng AI & HD 720p
                 </span>
               </div>
 
